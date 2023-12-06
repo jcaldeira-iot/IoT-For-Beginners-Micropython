@@ -108,7 +108,8 @@ Your first step is to create an Azure Maps account.
     az maps account create --name gps-sensor \
                            --resource-group gps-sensor \
                            --accept-tos \
-                           --sku S1
+                           --sku G2 \
+                           --kind Gen2
     ```
 
     This will create an Azure Maps resource called `gps-sensor`. The tier being used is `S1`, which is a paid tier that includes a range of features, but with a generous amount of calls for free.
