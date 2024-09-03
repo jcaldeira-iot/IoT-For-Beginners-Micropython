@@ -50,8 +50,6 @@ All sensors have one thing in common - they convert whatever they sense into an 
 
 Follow the relevant guide below to add a sensor to your IoT device:
 
-* [Arduino - Wio Terminal](wio-terminal-sensor.md)
-* [Single-board computer - Raspberry Pi](pi-sensor.md)
 * [Single-board computer - Virtual device](virtual-device-sensor.md)
 
 ## Sensor types
@@ -127,8 +125,6 @@ Follow the relevant guide below to add an actuator to your IoT device, controlle
 
 ![A flow chart of the assignment showing light levels being read and checked, and the LED begin controlled](../../../images/assignment-1-flow.png)
 
-* [Arduino - Wio Terminal](wio-terminal-actuator.md)
-* [Single-board computer - Raspberry Pi](pi-actuator.md)
 * [Single-board computer - Virtual device](virtual-device-actuator.md)
 
 ## Actuator types
