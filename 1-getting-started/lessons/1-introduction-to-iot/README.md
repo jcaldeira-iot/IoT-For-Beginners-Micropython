@@ -137,8 +137,6 @@ These instructions do include links to third-party websites from the creators of
 
 Work through the relevant guide to set your device up and complete a 'Hello World' project. This will be the first step in creating an IoT nightlight over the 4 lessons in this getting started part.
 
-* [Arduino - Wio Terminal](wio-terminal.md)
-* [Single-board computer - Raspberry Pi](pi.md)
 * [Single-board computer - Virtual device](virtual-device.md)
 
 ✅ You will be using VS Code for both Arduino and Single-board computers. If you haven't used this before, read more about it on the [VS Code site](https://code.visualstudio.com?WT.mc_id=academic-17441-jabenn)
