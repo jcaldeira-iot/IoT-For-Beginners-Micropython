@@ -133,8 +133,7 @@ Data is sent encoded as JSON - short for JavaScript Object Notation, a standard 
 
 Follow the relevant step below to send telemetry from your device to the MQTT broker:
 
-* [Arduino - Wio Terminal](wio-terminal-telemetry.md)
-* [Single-board computer - Raspberry Pi/Virtual IoT device](single-board-computer-telemetry.md)
+* [Single-board computer - Virtual IoT device](single-board-computer-telemetry.md)
 
 ### Receive telemetry from the MQTT broker
 
