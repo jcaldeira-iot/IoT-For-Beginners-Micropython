@@ -52,7 +52,7 @@ Program the device to decode the GPS data.
 1. Run the code. If you are using a virtual IoT device, then make sure the CounterFit app is running and the GPS data is being sent.
 
     ```output
-    pi@raspberrypi:~/gps-sensor $ python3 app.py 
+    ...gps-sensor$ python3 app.py 
     47.6423109,-122.1390293 - from 3 satellites
     ```
 
