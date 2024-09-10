@@ -76,9 +76,7 @@ Temperature sensors can be used with IoT devices to measure ambient temperature.
 
 Work through the relevant guide to monitor temperatures using your IoT device:
 
-* [Arduino - Wio Terminal](wio-terminal-temp.md)
-* [Single-board computer - Raspberry Pi](pi-temp.md)
-* [Single-board computer - Virtual device](virtual-device-temp.md)
+* **[Single-board computer - Virtual device](virtual-device-temp.md) <<<<----------**
 
 ## Growing degree days
 
@@ -142,8 +140,7 @@ The server code can also augment the data by adding extra information. For examp
 
 Work through the relevant guide to publish temperature data over MQTT using your IoT device so it can be analyzed later:
 
-* [Arduino - Wio Terminal](wio-terminal-temp-publish.md)
-* [Single-board computer - Raspberry Pi/Virtual IoT device](single-board-computer-temp-publish.md)
+* **[Single-board computer - Raspberry Pi/Virtual IoT device](single-board-computer-temp-publish.md) <<<<----------**
 
 ### Task - capture and store the temperature information
 
@@ -154,8 +151,6 @@ The CSV file will have two columns - *date* and *temperature*. The *date* column
 1. Repeat the steps in lesson 4 to create server code to subscribe to telemetry. You don't need to add code to publish commands.
 
     The steps for this are:
-
-    * Configure and activate a Python Virtual Environment
 
     * Install the paho-mqtt pip package
 
