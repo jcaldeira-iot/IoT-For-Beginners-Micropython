@@ -14,7 +14,7 @@ In these 4 lessons, you'll learn how to apply the Internet of Things to improve 
 
 ## Topics
 
-1. [Location tracking](lessons/1-location-tracking/README.md)
+11. [Location tracking](lessons/1-location-tracking/README.md)
 1. [Store location data](lessons/2-store-location-data/README.md)
 1. [Visualize location data](lessons/3-visualize-location-data/README.md)
 1. [Geofences](lessons/4-geofences/README.md)
