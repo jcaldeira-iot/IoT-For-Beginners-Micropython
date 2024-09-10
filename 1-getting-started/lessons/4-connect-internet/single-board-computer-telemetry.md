@@ -44,7 +44,7 @@ Publish telemetry to the MQTT broker.
 
     This code packages the light level into a JSON document and publishes it to the MQTT broker. It then sleeps to reduce the frequency that messages are sent.
 
-1. Run the code in the same way as you ran the code from the previous part of the assignment. If you are using a virtual IoT device, then make sure the CounterFit app is running and the light sensor and LED have been created on the correct pins.
+1. Run the code in the same way as you ran the code from the previous part of the assignment. If you are using a virtual IoT device, then **make sure the CounterFit app is running and the light sensor and LED have been created on the correct pins**.
 
     ```output
     ...nightlight$ python3 app.py 
