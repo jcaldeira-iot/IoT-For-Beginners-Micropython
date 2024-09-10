@@ -73,7 +73,7 @@ Rather than dealing with the complexities of setting up an MQTT broker as part o
 
 Follow the relevant step below to connect your device to the MQTT broker:
 
-* [Single-board computer - Virtual IoT device](single-board-computer-mqtt.md)
+* **[Single-board computer - Virtual IoT device](single-board-computer-mqtt.md) <<<<----------**
 
 ### A deeper dive into MQTT
 
@@ -133,7 +133,7 @@ Data is sent encoded as JSON - short for JavaScript Object Notation, a standard 
 
 Follow the relevant step below to send telemetry from your device to the MQTT broker:
 
-* [Single-board computer - Virtual IoT device](single-board-computer-telemetry.md)
+* **[Single-board computer - Virtual IoT device](single-board-computer-telemetry.md) <<<<----------**
 
 ### Receive telemetry from the MQTT broker
 
@@ -407,7 +407,7 @@ Now that commands are being sent from the server, you can now add code to the Io
 
 Follow the relevant step below to listen to commands from the MQTT broker:
 
-* [Single-board computer - Virtual IoT device](single-board-computer-commands.md)
+* **[Single-board computer - Virtual IoT device](single-board-computer-commands.md) <<<<----------**
 
 Once this code is written and running, experiment with changing light levels. Watch the output from the server and device, and watch the LED as you change light levels.
 
