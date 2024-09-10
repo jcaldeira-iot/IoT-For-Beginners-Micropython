@@ -42,7 +42,7 @@ The device can now be programmed to use the built in light sensor.
 
 Program the device.
 
-1. Open the nightlight project in VS Code that you created in the previous part of this assignment. Kill and re-create the terminal to ensure it is running using the virtual environment if necessary.
+1. Open the nightlight project in VS Code that you created in the previous part of this assignment.
 
 1. Open the `app.py` file
 
