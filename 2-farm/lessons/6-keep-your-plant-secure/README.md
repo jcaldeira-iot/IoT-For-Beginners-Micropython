@@ -204,8 +204,7 @@ The Azure CLI has commands to create a new device identity in IoT Hub, and autom
 
 Work through the relevant guide to connect your IoT device to the cloud using the X.509 certificate:
 
-* [Arduino - Wio Terminal](wio-terminal-x509.md)
-* [Single-board computer - Raspberry Pi/Virtual IoT device](single-board-computer-x509.md)
+* **[Single-board computer - Raspberry Pi/Virtual IoT device](single-board-computer-x509.md) <<<<----------**
 
 ---
 
