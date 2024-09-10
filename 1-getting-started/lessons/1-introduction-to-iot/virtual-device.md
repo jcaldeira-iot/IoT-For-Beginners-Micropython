@@ -4,20 +4,6 @@ Instead of purchasing an IoT device, along with sensors and actuators, you can u
 
 ## Setup
 
-To use CounterFit, you will need to install some free software on your computer.
-
-### Task
-
-Install the required software.
-
-1. Install Python. Refer to the [Python downloads page](https://www.python.org/downloads/) for instructions on install the latest version of Python.
-
-1. Install Visual Studio Code (VS Code). This is the editor you will be using to write your virtual device code in Python. Refer to the [VS Code documentation](https://code.visualstudio.com?WT.mc_id=academic-17441-jabenn) for instructions on installing VS Code.
-
-    > 💁 You are free to use any Python IDE or editor for these lessons if you have a preferred tool, but the lessons will give instructions based off using VS Code.
-
-1. Install the VS Code Pylance extension. This is an extension for VS Code that provides Python language support. Refer to the [Pylance extension documentation](https://marketplace.visualstudio.com/items?WT.mc_id=academic-17441-jabenn&itemName=ms-python.vscode-pylance) for instructions on installing this extension in VS Code.
-
 The instructions to install and configure the CounterFit app will be given at the relevant time in the assignment instructions as it is installed on a per-project basis.
 
 ## Hello world
@@ -32,13 +18,17 @@ This app will be in a folder called `nightlight`, and it will be re-used with di
 
 One of the powerful features of Python is the ability to install [Pip packages](https://pypi.org) - these are packages of code written by other people and published to the Internet. You can install a Pip package onto your computer with one command, then use that package in your code. You'll be using Pip to install a package to talk to CounterFit.
 
-By default when you install a package it is available everywhere on your computer, and this can lead to problems with package versions - such as one application depending on one version of a package that breaks when you install a new version for a different application. To work around this problem, you can use a [Python virtual environment](https://docs.python.org/3/library/venv.html), essentially a copy of Python in a dedicated folder, and when you install Pip packages they get installed just to that folder.
+#### Task - install CounterFit
 
-> 💁 If you are using a Raspberry Pi then you didn't set up a virtual environment on that device to manage Pip packages, instead you are using global packages, as the Grove packages are installed globally by the installer script.
+Install the Pip packages for CounterFit.
 
-#### Task - configure a Python virtual environment
+1. From your terminal or command line, run the following commands to install the Pip packages for CounterFit. These packages include the main CounterFit app as well as shims for Grove hardware. These shims allow you to write code as if you were programming using physical sensors and actuators from the Grove ecosystem but connected to virtual IoT devices.
 
-Configure a Python virtual environment and install the Pip packages for CounterFit.
+    ```sh
+    pip3 install CounterFit
+    pip3 install counterfit-connection
+    pip3 install counterfit-shims-grove
+    ```
 
 1. From your terminal or command line, run the following at a location of your choice to create and navigate to a new directory:
 
@@ -46,72 +36,6 @@ Configure a Python virtual environment and install the Pip packages for CounterF
     mkdir nightlight
     cd nightlight
     ```
-
-1. Now run the following to create a virtual environment in the `.venv` folder
-
-    ```sh
-    python3 -m venv .venv
-    ```
-
-    > 💁 You need to explicitly call `python3` to create the virtual environment just in case you have Python 2 installed in addition to Python 3 (the latest version). If you have Python2 installed then calling `python` will use Python 2 instead of Python 3
-
-1. Activate the virtual environment:
-
-    * On Windows:
-        * If you are using the Command Prompt, or the Command Prompt through Windows Terminal, run:
-
-            ```cmd
-            .venv\Scripts\activate.bat
-            ```
-
-        * If you are using PowerShell, run:
-
-            ```powershell
-            .\.venv\Scripts\Activate.ps1
-            ```
-
-            > If you get an error about running scripts being disabled on this system, you will need to enable running scripts by setting an appropriate execution policy. You can do this by launching PowerShell as an administrator, then running the following command:
-
-            ```powershell
-            Set-ExecutionPolicy -ExecutionPolicy Unrestricted
-            ```
-
-            Enter `Y` when asked to confirm. Then re-launch PowerShell and try again.
-
-            You can reset this execution policy at a later date if needed. You can read more on this in the [Execution Policies page on Microsoft Docs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies?WT.mc_id=academic-17441-jabenn).
-
-    * On macOS or Linux, run:
-
-        ```cmd
-        source ./.venv/bin/activate
-        ```
-
-    > 💁 These commands should be run from the same location you ran the command to create the virtual environment. You will never need to navigate into the `.venv` folder, you should always run the activate command and any commands to install packages or run code from the folder you were in when you created the virtual environment.
-
-1. Once the virtual environment has been activated, the default `python` command will run the version of Python that was used to create the virtual environment. Run the following to get the version:
-
-    ```sh
-    python --version
-    ```
-
-    The output should contain the following:
-
-    ```output
-    (.venv) ➜  nightlight python --version
-    Python 3.9.1
-    ```
-
-    > 💁 Your Python version may be different - as long as it's version 3.6 or higher you are good. If not, delete this folder, install a newer version of Python and try again.
-
-1. Run the following commands to install the Pip packages for CounterFit. These packages include the main CounterFit app as well as shims for Grove hardware. These shims allow you to write code as if you were programming using physical sensors and actuators from the Grove ecosystem but connected to virtual IoT devices.
-
-    ```sh
-    pip install CounterFit
-    pip install counterfit-connection
-    pip install counterfit-shims-grove
-    ```
-
-    These pip packages will only be installed in the virtual environment, and will not be available outside of this.
 
 ### Write the code
 
@@ -154,16 +78,15 @@ Create a Python application to print `"Hello World"` to the console.
     You can tell if the terminal has the virtual environment activated as the name of the virtual environment will be a prefix on the terminal prompt. For example, it might be:
 
     ```sh
-    (.venv) ➜  nightlight
+    ...nightlight$
     ```
 
     If you don't have `.venv` as a prefix on the prompt, the virtual environment is not active in the terminal.
 
-1. Launch a new VS Code Terminal by selecting *Terminal -> New Terminal, or pressing `` CTRL+` ``. The new terminal will load the virtual environment, and the call to activate this will appear in the terminal. The prompt will also have the name of the virtual environment (`.venv`):
+1. Launch a new VS Code Terminal by selecting *Terminal -> New Terminal, or pressing `` CTRL+` ``:
 
     ```output
-    ➜  nightlight source .venv/bin/activate
-    (.venv) ➜  nightlight 
+    ...nightlight$
     ```
 
 1. Open the `app.py` file from the VS Code explorer and add the following code:
@@ -177,13 +100,13 @@ Create a Python application to print `"Hello World"` to the console.
 1. From the VS Code terminal, run the following to run your Python app:
 
     ```sh
-    python app.py
+    python3 app.py
     ```
 
     The following will be in the output:
 
     ```output
-    (.venv) ➜  nightlight python app.py 
+    ...nightlight$ python3 app.py 
     Hello World!
     ```
 
