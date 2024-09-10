@@ -8,7 +8,7 @@ As a helpful debugging step you can not only print out the bounding boxes, but y
 
 ### Task - print the bounding boxes
 
-1. Ensure the `stock-counter` project is open in VS Code, and the virtual environment is activated if you are using a virtual IoT device.
+1. Ensure the `stock-counter` project is open in VS Code.
 
 1. Change the `print` statement in the `for` loop to the following to print the bounding boxes to the console:
 
@@ -158,6 +158,6 @@ In the image shown above, the bounding boxes have a small overlap. If this overl
 
 1. Run the app with the camera pointing at some stock on a shelf. The output will indicate the number of bounding boxes without overlaps that exceed the threshold. Try adjusting the `overlap_threshold` value to see predictions being ignored.
 
-> 💁 You can find this code in the [code-count/pi](code-count/pi) or [code-count/virtual-iot-device](code-count/virtual-iot-device) folder.
+> 💁 You can find this code in the [code-count/virtual-iot-device](code-count/virtual-iot-device) folder.
 
 😀 Your stock counter program was a success!
