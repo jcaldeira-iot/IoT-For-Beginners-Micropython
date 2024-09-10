@@ -52,6 +52,6 @@ The next step is to connect your device to IoT Hub using the X.509 certificates.
 
 1. Run your code. Monitor the messages sent to IoT Hub, and send direct method requests as before. You will see the device connecting and sending soil moisture readings, as well as receiving direct method requests.
 
-> 💁 You can find this code in the [code/pi](code/pi) or [code/virtual-device](code/virtual-device) folder.
+> 💁 You can find this code in the [code/virtual-device](code/virtual-device) folder.
 
 😀 Your soil moisture sensor program is connected to your IoT Hub using an X.509 certificate!
