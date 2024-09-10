@@ -16,12 +16,12 @@ To use a virtual distance sensor, you need to add one to the CounterFit app
 
 Add the distance sensor to the CounterFit app.
 
-1. Open the `fruit-quality-detector` code in VS Code, and make sure the virtual environment is activated.
+1. Open the `fruit-quality-detector` code in VS Code.
 
 1. Install an additional Pip package to install a CounterFit shim that can talk to distance sensors by simulating the [rpi-vl53l0x Pip package](https://pypi.org/project/rpi-vl53l0x/), a Python package that interacts with [a VL53L0X time-of-flight distance sensor](https://wiki.seeedstudio.com/Grove-Time_of_Flight_Distance_Sensor-VL53L0X/). Make sure you are installing this from a terminal with the virtual environment activated.
 
     ```sh
-    pip install counterfit-shims-rpi-vl53l0x
+    pip3 install counterfit-shims-rpi-vl53l0x
     ```
 
 1. Make sure the CounterFit web app is running
@@ -96,7 +96,7 @@ The virtual IoT device can now be programmed to use the simulated distance senso
 1. You will see distance measurements appear in the console. Change the value in CounterFit to see this value change, or use random values.
 
     ```output
-    (.venv) ➜  fruit-quality-detector python distance-sensor.py 
+    ...fruit-quality-detector$ python3 distance-sensor.py 
     Distance = 37 mm
     Distance = 42 mm
     Distance = 29 mm
