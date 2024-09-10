@@ -84,8 +84,7 @@ Iterations are published from the Custom Vision portal.
 
 Follow the relevant guide below to use the object detector from your IoT device:
 
-* [Arduino - Wio Terminal](wio-terminal-object-detector.md)
-* [Single-board computer - Raspberry Pi/Virtual device](single-board-computer-object-detector.md)
+* **[Single-board computer - Raspberry Pi/Virtual device](single-board-computer-object-detector.md) <<<<----------**
 
 ## Bounding boxes
 
@@ -152,8 +151,7 @@ Using a combination of the number of objects detected and the bounding boxes, yo
 
 Follow the relevant guide below to count stock using the results from the object detector from your IoT device:
 
-* [Arduino - Wio Terminal](wio-terminal-count-stock.md)
-* [Single-board computer - Raspberry Pi/Virtual device](single-board-computer-count-stock.md)
+* **[Single-board computer - Raspberry Pi/Virtual device](single-board-computer-count-stock.md) <<<<----------**
 
 ---
 
