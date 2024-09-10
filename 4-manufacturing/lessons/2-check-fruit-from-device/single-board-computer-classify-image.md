@@ -8,7 +8,7 @@ The Custom Vision service has a Python SDK you can use to classify images.
 
 ### Task - send images to Custom Vision
 
-1. Open the `fruit-quality-detector` folder in VS Code. If you are using a virtual IoT device, make sure the virtual environment is running in the terminal.
+1. Open the `fruit-quality-detector` folder in VS Code.
 
 1. The Python SDK to send images to Custom Vision is available as a Pip package. Install it with the following command:
 
@@ -77,7 +77,7 @@ The Custom Vision service has a Python SDK you can use to classify images.
 1. Run your code, with your camera pointing at some fruit, or an appropriate image set, or fruit visible on your webcam if using virtual IoT hardware. You will see the output in the console:
 
     ```output
-    (.venv) ➜  fruit-quality-detector python app.py
+    ...fruit-quality-detector$ python3 app.py
     ripe:   56.84%
     unripe: 43.16%
     ```
@@ -86,6 +86,6 @@ The Custom Vision service has a Python SDK you can use to classify images.
 
     ![A banana in custom vision predicted ripe at 56.8% and unripe at 43.1%](../../../images/custom-vision-banana-prediction.png)
 
-> 💁 You can find this code in the [code-classify/pi](code-classify/pi) or [code-classify/virtual-iot-device](code-classify/virtual-iot-device) folder.
+> 💁 You can find this code in the [code-classify/virtual-iot-device](code-classify/virtual-iot-device) folder.
 
 😀 Your fruit quality classifier program was a success!
