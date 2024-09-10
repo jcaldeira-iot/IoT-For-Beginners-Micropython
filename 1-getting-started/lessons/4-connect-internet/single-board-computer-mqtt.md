@@ -63,7 +63,7 @@ Write the device code.
 
     This code creates the client object, connects to the public MQTT broker, and starts a processing loop that runs in a background thread listening for messages on any subscribed topics.
 
-1. Run the code in the same way as you ran the code from the previous part of the assignment. If you are using a virtual IoT device, then make sure the CounterFit app is running and the light sensor and LED have been created on the correct pins.
+1. Run the code in the same way as you ran the code from the previous part of the assignment. If you are using a virtual IoT device, then **make sure the CounterFit app is running and the light sensor and LED have been created on the correct pins**.
 
     ```output
     ...nightlight$ python3 app.py 
