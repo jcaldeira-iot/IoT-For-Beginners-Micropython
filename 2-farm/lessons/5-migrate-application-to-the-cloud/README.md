@@ -71,29 +71,11 @@ To write Azure Functions, you start with an Azure Functions app in the language 
 
 Functions apps consist of one or more *triggers* - functions that respond to events. You can have multiple triggers inside one function app, all sharing common configuration. For example, in the configuration file for your Functions app you can have the connection details of your IoT Hub, and all the functions in the app can use this to connect and listen for events.
 
-### Task - install the Azure Functions tooling
-
-> At the time of writing, the Azure Functions code tools are not fully working on Apple Silicon with Python projects. You will need to use am Intel-based Mac, Windows PC, or Linux PC instead.
-
-One great feature of Azure Functions is that you can run them locally. The same runtime that is used in the cloud can be run on your computer, allowing you to write code that responds to IoT messages and run it locally. You can even debug your code as events are handled. Once you are happy with your code, it can be deployed to the cloud.
-
-The Azure Functions tooling is available as a CLI, known as the Azure Functions Core Tools.
-
-1. Install the Azure Functions core tools by following the instructions on the [Azure Functions Core Tools documentation](https://docs.microsoft.com/azure/azure-functions/functions-run-local?WT.mc_id=academic-17441-jabenn)
-
-1. Install the Azure Functions extension for VS Code. This extension provides support for creating, debugging and deploying Azure functions.  Refer to the [Azure Functions extension documentation](https://marketplace.visualstudio.com/items?WT.mc_id=academic-17441-jabenn&itemName=ms-azuretools.vscode-azurefunctions) for instructions on installing this extension in VS Code.
+### Task - run Azurite cloud storage emulator
 
 When you deploy your Azure Functions app to the cloud, it needs to use a small amount of cloud storage to store things like the application files and log files. When you run your Functions app locally, you still need to connect to cloud storage, but instead of using actual cloud storage, you can use a storage emulator called [Azurite](https://github.com/Azure/Azurite). This runs locally but acts like cloud storage.
 
 > 🎓 In Azure, the storage that Azure Functions uses is an Azure Storage Account. These accounts can store files, blobs, data in tables or data in queues. You can share one storage account between many apps, such as a Functions app and a web app.
-
-1. Azurite is a Node.js app, so you will need to install Node.js. You can find the download and installation instructions on the [Node.js website](https://nodejs.org/). If you are using a Mac, you can also install it from [Homebrew](https://formulae.brew.sh/formula/node).
-
-1. Install Azurite using the following command (`npm` is a tool that is installed when you install Node.js):
-
-    ```sh
-    npm install -g azurite
-    ```
 
 1. Create a folder called `azurite` for Azurite to use to store data:
 
@@ -121,6 +103,10 @@ When you deploy your Azure Functions app to the cloud, it needs to use a small a
 
 ### Task - create an Azure Functions project
 
+One great feature of Azure Functions is that you can run them locally. The same runtime that is used in the cloud can be run on your computer, allowing you to write code that responds to IoT messages and run it locally. You can even debug your code as events are handled. Once you are happy with your code, it can be deployed to the cloud.
+
+The Azure Functions tooling is available as a CLI, known as the Azure Functions Core Tools.
+
 The Azure Functions CLI can be used to create a new Functions app.
 
 1. Create a folder for your Functions app and navigate to it. Call it `soil-moisture-trigger`
@@ -129,35 +115,6 @@ The Azure Functions CLI can be used to create a new Functions app.
     mkdir soil-moisture-trigger
     cd soil-moisture-trigger
     ```
-
-1. Create a Python virtual environment inside this folder:
-
-    ```sh
-    python3 -m venv .venv
-    ```
-
-1. Activate the virtual environment:
-
-    * On Windows:
-        * If you are using the Command Prompt, or the Command Prompt through Windows Terminal, run:
-
-            ```cmd
-            .venv\Scripts\activate.bat
-            ```
-
-        * If you are using PowerShell, run:
-
-            ```powershell
-            .\.venv\Scripts\Activate.ps1
-            ```
-
-    * On macOS or Linux, run:
-
-        ```cmd
-        source ./.venv/bin/activate
-        ```
-
-    > 💁 These commands should be run from the same location you ran the command to create the virtual environment. You will never need to navigate into the `.venv` folder, you should always run the activate command and any commands to install packages or run code from the folder you were in when you created the virtual environment.
 
 1. Run the following command to create a Functions app in this folder:
 
@@ -180,7 +137,7 @@ The Azure Functions CLI can be used to create a new Functions app.
 1. Install the necessary Pip packages using the requirements file:
 
     ```sh
-    pip install -r requirements.txt
+    pip3 install -r requirements.txt
     ```
 
     > 💁 The required Pip packages need to be in this file, so that when the Functions app is deployed to the cloud, the runtime can ensure it installs the correct packages.
@@ -194,7 +151,7 @@ The Azure Functions CLI can be used to create a new Functions app.
     You will see the runtime start up and report that it hasn't found any job functions (triggers).
 
     ```output
-    (.venv) ➜  soil-moisture-trigger func start
+    ...soil-moisture-trigger$ func start
     Found Python version 3.9.1 (python3).
     
     Azure Functions Core Tools
@@ -209,7 +166,7 @@ The Azure Functions CLI can be used to create a new Functions app.
     > ⚠️ If you are using macOS, there may be warnings in the output:
     >
     > ```output
-    > (.venv) ➜  soil-moisture-trigger func start
+    > ...soil-moisture-trigger$ func start
     > Found Python version 3.9.1 (python3).
     >
     > Azure Functions Core Tools
@@ -241,8 +198,6 @@ The Azure Functions CLI can be used to create a new Functions app.
     ![The notification](../../../images/vscode-azure-functions-init-notification.png)
 
     Select **Yes** from this notification.
-
-1. Make sure the Python virtual environment is running in the VS Code terminal. Terminate it and restart it if necessary.
 
 ## Create an IoT Hub event trigger
 
@@ -361,7 +316,7 @@ This will create a folder inside the `soil-moisture-trigger` folder called `iot-
     The Functions app will start up, and will discover the `iot-hub-trigger` function. It will then process any events that have already been sent to the IoT Hub in the past day.
 
     ```output
-    (.venv) ➜  soil-moisture-trigger func start
+    ...soil-moisture-trigger$ func start
     Found Python version 3.9.1 (python3).
     
     Azure Functions Core Tools
@@ -456,7 +411,7 @@ To connect to the Registry Manager, you need a connection string.
 1. Make sure the VS Code terminal has the virtual environment activated, and run the following command to install the Pip packages:
 
     ```sh
-    pip install -r requirements.txt
+    pip3 install -r requirements.txt
     ```
 
 1. Add the following imports to the `__init__.py` file:
