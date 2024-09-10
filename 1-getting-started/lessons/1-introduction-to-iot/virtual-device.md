@@ -14,7 +14,7 @@ The Hello World app for the virtual IoT hardware will ensure that you have Pytho
 
 This app will be in a folder called `nightlight`, and it will be re-used with different code in later parts of this assignment to build the nightlight application.
 
-### Configure a Python virtual environment
+### Create a Python ´Hello world´ example and connect it to CounterFit
 
 One of the powerful features of Python is the ability to install [Pip packages](https://pypi.org) - these are packages of code written by other people and published to the Internet. You can install a Pip package onto your computer with one command, then use that package in your code. You'll be using Pip to install a package to talk to CounterFit.
 
@@ -39,13 +39,11 @@ Install the Pip packages for CounterFit.
 
 ### Write the code
 
-Once the Python virtual environment is ready, you can write the code for the 'Hello World' application
-
 #### Task - write the code
 
 Create a Python application to print `"Hello World"` to the console.
 
-1. From your terminal or command line, run the following inside the virtual environment to create a Python file called `app.py`:
+1. From your terminal or command line, run the following to create a Python file called `app.py`:
 
     * From Windows run:
 
@@ -67,24 +65,9 @@ Create a Python application to print `"Hello World"` to the console.
 
     > 💁 If your terminal returns `command not found` on macOS it means VS Code has not been added to your PATH. You can add VS Code to your PATH by following the instructions in the [Launching from the command line section of the VS Code documentation](https://code.visualstudio.com/docs/setup/mac?WT.mc_id=academic-17441-jabenn#_launching-from-the-command-line) and run the command afterwards. VS Code is installed to your PATH by default on Windows and Linux.
 
-1. When VS Code launches, it will activate the Python virtual environment. The selected virtual environment will appear in the bottom status bar:
-
-    ![VS Code showing the selected virtual environment](../../../images/vscode-virtual-env.png)
-
-1. If the VS Code Terminal is already running when VS Code starts up, it won't have the virtual environment activated in it. The easiest thing to do is kill the terminal using the **Kill the active terminal instance** button:
-
-    ![VS Code Kill the active terminal instance button](../../../images/vscode-kill-terminal.png)
-
-    You can tell if the terminal has the virtual environment activated as the name of the virtual environment will be a prefix on the terminal prompt. For example, it might be:
-
-    ```sh
-    ...nightlight$
-    ```
-
-    If you don't have `.venv` as a prefix on the prompt, the virtual environment is not active in the terminal.
-
 1. Launch a new VS Code Terminal by selecting *Terminal -> New Terminal, or pressing `` CTRL+` ``:
 
+    ![VS Code Kill the active terminal instance button](../../../images/vscode-kill-terminal.png)
     ```output
     ...nightlight$
     ```
