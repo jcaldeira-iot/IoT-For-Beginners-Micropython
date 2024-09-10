@@ -42,7 +42,7 @@ Subscribe to commands.
 
     > 💁 The `on_message` handler is called for all topics subscribed to. If you later write code that listens to multiple topics, you can get the topic that the message was sent to from the `message` object passed to the handler function.
 
-1. Run the code in the same way as you ran the code from the previous part of the assignment. If you are using a virtual IoT device, then make sure the CounterFit app is running and the light sensor and LED have been created on the correct pins.
+1. Run the code in the same way as you ran the code from the previous part of the assignment. If you are using a virtual IoT device, then **make sure the CounterFit app is running and the light sensor and LED have been created on the correct pins**.
 
 1. Adjust the light levels detected by your physical or virtual device. Messages being received and commands being sent will be written to the terminal. The LED will also be turned on and off depending on the light level.
 
