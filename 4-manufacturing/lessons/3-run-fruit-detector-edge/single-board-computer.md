@@ -10,7 +10,7 @@ The Python library for Custom Vision only works with cloud-hosted models, not mo
 
 ### Task - use the IoT Edge classifier
 
-1. Open the `fruit-quality-detector` project in VS Code if it is not already open. If you are using a virtual IoT device, then make sure the virtual environment is activated.
+1. Open the `fruit-quality-detector` project in VS Code if it is not already open.
 
 1. Open the `app.py` file, and remove the import statements from `azure.cognitiveservices.vision.customvision.prediction` and `msrest.authentication`.
 
@@ -44,11 +44,11 @@ The Python library for Custom Vision only works with cloud-hosted models, not mo
 1. Run your code, with your camera pointing at some fruit, or an appropriate image set, or fruit visible on your webcam if using virtual IoT hardware. You will see the output in the console:
 
     ```output
-    (.venv) ➜  fruit-quality-detector python app.py
+    ...fruit-quality-detector$ python3 app.py
     ripe:   56.84%
     unripe: 43.16%
     ```
 
-> 💁 You can find this code in the [code-classify/pi](code-classify/pi) or [code-classify/virtual-iot-device](code-classify/virtual-iot-device) folder.
+> 💁 You can find this code in the [code-classify/virtual-iot-device](code-classify/virtual-iot-device) folder.
 
 😀 Your fruit quality classifier program was a success!
