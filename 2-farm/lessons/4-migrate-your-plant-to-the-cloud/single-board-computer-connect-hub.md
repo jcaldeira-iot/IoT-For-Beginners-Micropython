@@ -8,7 +8,7 @@ The next step is to connect your device to IoT Hub.
 
 ### Task - connect to IoT Hub
 
-1. Open the `soil-moisture-sensor` folder in VS Code. Make sure the virtual environment is running in the terminal if you are using a virtual IoT device.
+1. Open the `soil-moisture-sensor` folder in VS Code.
 
 1. Install some additional Pip packages:
 
@@ -51,7 +51,7 @@ The next step is to connect your device to IoT Hub.
 1. Run this code. You will see your device connect.
 
     ```output
-    pi@raspberrypi:~/soil-moisture-sensor $ python3 app.py 
+    ...soil-moisture-sensor$ python3 app.py 
     Connecting
     Connected
     Soil moisture: 379
