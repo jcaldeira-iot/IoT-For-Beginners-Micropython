@@ -121,19 +121,19 @@ In the last lesson you captured GPS data from a GPS sensor connected to your IoT
 
 1. Send GPS data every minute so you don't use up your daily message allocation.
 
-If you are using a Virtual IoT device, remember to install all the needed libraries.
+    If you are using a Virtual IoT device, remember to install all the needed libraries.
 
-For Virtual IoT device, use the existing code from the last lesson to get the latitude and longitude values, then send them in the correct JSON format with the following code:
+    For Virtual IoT device, use the existing code from the last lesson to get the latitude and longitude values, then send them in the correct JSON format with the following code:
 
-```python
-message_json = { "gps" : { "lat":lat, "lon":lon } }
-print("Sending telemetry", message_json)
-message = Message(json.dumps(message_json))
-```
+    ```python
+    message_json = { "gps" : { "lat":lat, "lon":lon } }
+    print("Sending telemetry", message_json)
+    message = Message(json.dumps(message_json))
+    ```
 
-> 💁 You can find this code in the [code/virtual-device](code/virtual-device) folder.
+    > 💁 You can find this code in the [code/virtual-device](code/virtual-device) folder.
 
-Run your device code and ensure messages are flowing into IoT Hub using the `az iot hub monitor-events` CLI command.
+    Run your device code and ensure messages are flowing into IoT Hub using the `az iot hub monitor-events` CLI command.
 
 ## Hot, warm, and cold paths
 
