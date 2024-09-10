@@ -16,14 +16,14 @@ To use a virtual humidity and temperature sensor, you need to add the two sensor
 
 Add the humidity and temperature sensors to the CounterFit app.
 
-1. Create a new Python app on your computer in a folder called `temperature-sensor` with a single file called `app.py` and a Python virtual environment, and add the CounterFit pip packages.
+1. Create a new Python app on your computer in a folder called `temperature-sensor` with a single file called `app.py`, and add the CounterFit pip packages.
 
     > ⚠️ You can refer to [the instructions for creating and setting up a CounterFit Python project in lesson 1 if needed](../../../1-getting-started/lessons/1-introduction-to-iot/virtual-device.md).
 
-1. Install an additional Pip package to install a CounterFit shim for the DHT11 sensor. Make sure you are installing this from a terminal with the virtual environment activated.
+1. Install an additional Pip package to install a CounterFit shim for the DHT11 sensor.
 
     ```sh
-    pip install counterfit-shims-seeed-python-dht
+    pip3 install counterfit-shims-seeed-python-dht
     ```
 
 1. Make sure the CounterFit web app is running
@@ -117,7 +117,7 @@ Program the temperature sensor app.
 1. From the VS Code Terminal with an activated virtual environment, run the following to run your Python app:
 
     ```sh
-    python app.py
+    python3 app.py
     ```
 
 1. From the CounterFit app, change the value of the temperature sensor that will be read by the app. You can do this in one of two ways:
@@ -129,7 +129,7 @@ Program the temperature sensor app.
     You should see the values you set appearing in the console. Change the *Value* or the *Random* settings to see the value change.
 
     ```output
-    (.venv) ➜  temperature-sensor python app.py
+    ...temperature-sensor$ python3 app.py
     Temperature 28.25°C
     Temperature 30.71°C
     Temperature 25.17°C
