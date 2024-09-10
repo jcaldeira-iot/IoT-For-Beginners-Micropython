@@ -52,7 +52,7 @@ The nightlight can now be programmed using the CounterFit light sensor and LED.
 
 Program the nightlight.
 
-1. Open the nightlight project in VS Code that you created in the previous part of this assignment. Kill and re-create the terminal to ensure it is running using the virtual environment if necessary.
+1. Open the nightlight project in VS Code that you created in the previous part of this assignment.
 
 1. Open the `app.py` file
 
