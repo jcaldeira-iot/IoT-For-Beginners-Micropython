@@ -143,17 +143,7 @@ Once you have created the edge device registration in your IoT Hub, you can set 
 
 ### Task - Install and start the IoT Edge Runtime
 
-**The IoT Edge runtime only runs Linux containers.** It can be run on Linux, or on Windows using Linux Virtual Machines.
-
-* If you are using a Raspberry Pi as your IoT device, then this runs a supported version of Linux and can host the IoT Edge runtime. Follow the [install Azure IoT Edge for Linux guide on Microsoft docs](https://docs.microsoft.com/azure/iot-edge/how-to-install-iot-edge?WT.mc_id=academic-17441-jabenn) to install IoT Edge and set the connection string.
-
-    > 💁 Remember, Raspberry Pi OS is a variant of Debian Linux.
-
-* If you are not using a Raspberry Pi, but have a Linux computer, you can run the IoT Edge runtime. Follow the [install Azure IoT Edge for Linux guide on Microsoft docs](https://docs.microsoft.com/azure/iot-edge/how-to-install-iot-edge?WT.mc_id=academic-17441-jabenn) to install IoT Edge and set the connection string.
-
-* If you are using Windows, you can install the IoT Edge runtime in a Linux Virtual Machine by following the [install and start the IoT Edge runtime section of the deploy your first IoT Edge module to a Windows device quickstart on Microsoft docs](https://docs.microsoft.com/azure/iot-edge/quickstart?WT.mc_id=academic-17441-jabenn#install-and-start-the-iot-edge-runtime). You can stop when you reach the *Deploy a module* section.
-
-* If you are using macOS, you can create a virtual machine (VM) in the cloud to use for your IoT Edge device. These are computers you can create in the cloud and access over the internet. You can create a Linux VM that has IoT Edge installed. Follow the [create a virtual machine running IoT Edge guide](vm-iotedge.md) for instructions on how to do this.
+**The IoT Edge runtime only runs Linux containers.** You can create a virtual machine (VM) in the cloud to use for your IoT Edge device. These are computers you can create in the cloud and access over the internet. You can create a Linux VM that has IoT Edge installed. Follow the [create a virtual machine running IoT Edge guide](vm-iotedge.md) for instructions on how to do this.
 
 ## Export your model
 
@@ -205,14 +195,6 @@ Once you have downloaded your model, it needs to be built into a container, then
 The container registry you will use for this lesson is Azure Container Registry. This is not a free service, so to save money make sure you [clean up your project](../../../clean-up.md) once you are finished.
 
 > 💁 You can see the costs of using an Azure Container Registry in the [Azure Container Registry pricing page](https://azure.microsoft.com/pricing/details/container-registry/?WT.mc_id=academic-17441-jabenn)
-
-### Task - install Docker
-
-To build and deploy the classifier classifier, you may need to install [Docker](https://www.docker.com/).
-
-You will only need to do this if you plan to build your container from a different device that the one you installed IoT Edge on - as part of installing IoT Edge, Docker is installed for you.
-
-1. If you building the docker container on a different device from your IoT Edge device, follow the Docker installation instructions on the [Docker install page](https://www.docker.com/products/docker-desktop) to install Docker Desktop or the Docker engine. Ensure it is running after installation.
 
 ### Task - create a container registry resource
 
@@ -269,7 +251,7 @@ What you downloaded from Custom Vision was a DockerFile containing instructions 
     docker build --platform <platform> -t <Container registry name>.azurecr.io/classifier:v1 .
     ```
 
-    Replace `<platform>` with the platform that this container will run on. If you are running IoT Edge on a Raspberry Pi, set this to `linux/armhf`, otherwise set this to `linux/amd64`.
+    Replace `<platform>` with the platform that this container will run on `linux/amd64`.
 
     > 💁 If you are running this command from the device you are running IoT Edge from, such as running this from your Raspberry Pi, you can omit the `--platform <platform>` part as it defaults to the current platform.
 
@@ -464,9 +446,7 @@ Your container can now be deployed to your IoT Edge device. To deploy you need t
 
 1. Connect to the IoT edge device:
 
-    * If you are using a Raspberry Pi to run IoT Edge, connect using ssh either from your terminal, or via a remote SSH session in VS Code
-    * If you are running IoT Edge in a Linux container on Windows, follow the steps in the [verify successful configuration guide](https://docs.microsoft.com/azure/iot-edge/how-to-install-iot-edge-on-windows?WT.mc_id=academic-17441-jabenn&view=iotedge-2018-06&tabs=powershell#verify-successful-configuration) to connect to the IoT Edge device.
-    * If you are running IoT Edge on a virtual machine, you can SSH into the machine using the `adminUsername` and `password` you set when creating the VM, and using either the IP address or DNS name:
+    * As you are running IoT Edge on a virtual machine, you can SSH into the machine using the `adminUsername` and `password` you set when creating the VM, and using either the IP address or DNS name:
 
         ```sh
         ssh <adminUsername>@<IP address>
@@ -579,8 +559,7 @@ Now that your Image Classifier has been deployed to an IoT Edge device, you can 
 
 Work through the relevant guide to classify images using the IoT Edge classifier:
 
-* [Arduino - Wio Terminal](wio-terminal.md)
-* [Single-board computer - Raspberry Pi/Virtual IoT device](single-board-computer.md)
+* **[Single-board computer - Raspberry Pi/Virtual IoT device](single-board-computer.md) <<<<----------**
 
 ### Model retraining
 
