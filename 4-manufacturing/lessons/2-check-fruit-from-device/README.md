@@ -46,9 +46,7 @@ You can use your IoT device to capture and image to be classified.
 
 Work through the relevant guide to capture an image using your IoT device:
 
-* [Arduino - Wio Terminal](wio-terminal-camera.md)
-* [Single-board computer - Raspberry Pi](pi-camera.md)
-* [Single-board computer - Virtual device](virtual-device-camera.md)
+* **[Single-board computer - Virtual device](virtual-device-camera.md) <<<<----------**
 
 ## Publish your image classifier
 
@@ -100,8 +98,7 @@ You can now use these connection details to call the image classifier from your 
 
 Work through the relevant guide to classify images using your IoT device:
 
-* [Arduino - Wio Terminal](wio-terminal-classify-image.md)
-* [Single-board computer - Raspberry Pi/Virtual IoT device](single-board-computer-classify-image.md)
+* **[Single-board computer - Raspberry Pi/Virtual IoT device](single-board-computer-classify-image.md) <<<<----------**
 
 ## Improve the model
 
