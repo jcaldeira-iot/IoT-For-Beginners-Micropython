@@ -88,9 +88,7 @@ You can control a relay from your IoT Dev kit.
 
 Work through the relevant guide to control a relay using your IoT device:
 
-* [Arduino - Wio Terminal](wio-terminal-relay.md)
-* [Single-board computer - Raspberry Pi](pi-relay.md)
-* [Single-board computer - Virtual device](virtual-device-relay.md)
+* **[Single-board computer - Virtual device](virtual-device-relay.md) <<<<----------**
 
 ## Control your plant over MQTT
 
@@ -196,7 +194,7 @@ The first option is not always a good solution for large farms. The farmer might
 
 Update your server code to run the relay for 5 seconds, then wait 20 seconds.
 
-1. Open the `soil-moisture-sensor-server` folder in VS Code if it isn't already open. Make sure the virtual environment is activated.
+1. Open the `soil-moisture-sensor-server` folder in VS Code if it isn't already open.
 
 1. Open the `app.py` file
 
@@ -263,7 +261,7 @@ Update your server code to run the relay for 5 seconds, then wait 20 seconds.
 1. Make sure your IoT device is running, then run this code. Change the soil moisture levels and observe what happens to the relay - it should turn on for 5 seconds then remain off for at least 20 seconds, only turning on if the soil moisture levels are not sufficient.
 
     ```output
-    (.venv) ➜  soil-moisture-sensor-server ✗ python app.py
+    ...soil-moisture-sensor-server$ python3 app.py
     Message received: {'soil_moisture': 457}
     Unsubscribing from telemetry
     Sending message: {'relay_on': True}
