@@ -12,7 +12,7 @@ In these 2 lessons you'll learn how to train image-based AI models to count stoc
 
 ## Topics
 
-1. [Train a stock detector](./lessons/1-train-stock-detector/README.md)
+19. [Train a stock detector](./lessons/1-train-stock-detector/README.md)
 1. [Check stock from an IoT device](./lessons/2-check-stock-device/README.md)
 
 ## Credits
