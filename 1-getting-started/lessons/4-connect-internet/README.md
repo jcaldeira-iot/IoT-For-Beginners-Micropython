@@ -285,7 +285,7 @@ Commands are messages sent by the cloud to a device, instructing it to do someth
 
 A thermostat could receive a command from the cloud to turn the heating on. Based on the telemetry data from all the sensors, if the cloud service has decided that the heating should be on, so it sends the relevant command.
 
-### Send commands to the MQTT broker
+#### Task - send commands to the MQTT broker
 
 The next step for our Internet controlled nightlight is for the server code to send a command back to the IoT device to control the light based on the light levels it senses.
 
@@ -324,7 +324,7 @@ The next step for our Internet controlled nightlight is for the server code to s
 
 > 💁 You can find this code in the [code-commands/server](code-commands/server) folder.
 
-### Handle commands on the IoT device
+#### Task - handle commands on the IoT device
 
 Now that commands are being sent from the server, you can now add code to the IoT device to handle them and control the LED.
 
