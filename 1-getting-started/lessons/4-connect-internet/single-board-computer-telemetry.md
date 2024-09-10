@@ -53,6 +53,6 @@ Publish telemetry to the MQTT broker.
     Sending telemetry  {"light": 0}
     ```
 
-> 💁 You can find this code in the [code-telemetry/virtual-device](code-telemetry/virtual-device) folder or the [code-telemetry/pi](code-telemetry/pi) folder.
+> 💁 You can find this code in the [code-telemetry/virtual-device](code-telemetry/virtual-device) folder.
 
 😀 You have successfully sent telemetry from your device.
