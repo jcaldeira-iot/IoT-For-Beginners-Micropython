@@ -8,7 +8,7 @@ In these 6 lessons you'll learn how to apply the Internet of Things to improve a
 
 ## Topics
 
-1. [Predict plant growth with IoT](lessons/1-predict-plant-growth/README.md)
+5. [Predict plant growth with IoT](lessons/1-predict-plant-growth/README.md)
 1. [Detect soil moisture](lessons/2-detect-soil-moisture/README.md)
 1. [Automated plant watering](lessons/3-automated-plant-watering/README.md)
 1. [Migrate your plant to the cloud](lessons/4-migrate-your-plant-to-the-cloud/README.md)
