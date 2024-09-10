@@ -141,31 +141,11 @@ There's no point in sending telemetry if there's nothing on the other end to lis
 
 ✅ Do some research: What happens to MQTT messages if there is no listener?
 
-#### Install Python and VS Code
-
-If you don't have Python and VS Code installed locally, you will need to install them both to code the server. If you are using a virtual IoT device, or are working on your Raspberry Pi you can skip this step as you should already have this installed and configured.
-
-##### Task - install Python and VS Code
-
-Install Python and VS Code.
-
-1. Install Python. Refer to the [Python downloads page](https://www.python.org/downloads/) for instructions on install the latest version of Python.
-
-1. Install Visual Studio Code (VS Code). This is the editor you will be using to write your virtual device code in Python. Refer to the [VS Code documentation](https://code.visualstudio.com?WT.mc_id=academic-17441-jabenn) for instructions on installing VS Code.
-
-    > 💁 You are free to use any Python IDE or editor for these lessons if you have a preferred tool, but the lessons will give instructions based off using VS Code.
-
-1. Install the VS Code Pylance extension. This is an extension for VS Code that provides Python language support. Refer to the [Pylance extension documentation](https://marketplace.visualstudio.com/items?WT.mc_id=academic-17441-jabenn&itemName=ms-python.vscode-pylance) for instructions on installing this extension in VS Code.
-
-#### Configure a Python virtual environment
+#### Install MQTT pip package
 
 One of the powerful features of Python is the ability to install [pip packages](https://pypi.org) - these are packages of code written by other people and published to the Internet. You can install a pip package onto your computer with one command, then use that package in your code. You'll be using pip to install a package to communicate over MQTT.
 
-By default when you install a package it is available everywhere on your computer, and this can lead to problems with package versions - such as one application depending on one version of a package that breaks when you install a new version for a different application. To work around this problem, you can use a [Python virtual environment](https://docs.python.org/3/library/venv.html), essentially a copy of Python in a dedicated folder, and when you install pip packages they get installed just to that folder.
-
-##### Task - configure a Python virtual environment
-
-Configure a Python virtual environment and install the MQTT pip packages.
+##### Task - create server location and install MQTT pip package
 
 1. From your terminal or command line, run the following at a location of your choice to create and navigate to a new directory:
 
@@ -174,56 +154,10 @@ Configure a Python virtual environment and install the MQTT pip packages.
     cd nightlight-server
     ```
 
-1. Now run the following to create a virtual environment in the `.venv` folder
-
-    ```sh
-    python3 -m venv .venv
-    ```
-
-    > 💁 You need to explicitly call `python3` to create the virtual environment just in case you have Python 2 installed in addition to Python 3 (the latest version). If you have Python2 installed then calling `python` will use Python 2 instead of Python 3
-
-1. Activate the virtual environment:
-
-    * On Windows:
-        * If you are using the Command Prompt, or the Command Prompt through Windows Terminal, run:
-
-            ```cmd
-            .venv\Scripts\activate.bat
-            ```
-
-        * If you are using PowerShell, run:
-
-            ```powershell
-            .\.venv\Scripts\Activate.ps1
-            ```
-
-    * On macOS or Linux, run:
-
-        ```cmd
-        source ./.venv/bin/activate
-        ```
-
-    > 💁 These commands should be run from the same location you ran the command to create the virtual environment. You will never need to navigate into the `.venv` folder, you should always run the activate command and any commands to install packages or run code from the folder you were in when you created the virtual environment.
-
-1. Once the virtual environment has been activated, the default `python` command will run the version of Python that was used to create the virtual environment. Run the following to get the version:
-
-    ```sh
-    python --version
-    ```
-
-    The output will be similar to the following:
-
-    ```output
-    (.venv) ➜  nightlight-server python --version
-    Python 3.9.1
-    ```
-
-    > 💁 Your Python version may be different - as long as it's version 3.6 or higher you are good. If not, delete this folder, install a newer version of Python and try again.
-
 1. Run the following commands to install the pip package for [Paho-MQTT](https://pypi.org/project/paho-mqtt/), a popular MQTT library.
 
     ```sh
-    pip install paho-mqtt
+    pip3 install paho-mqtt
     ```
 
     This pip package will only be installed in the virtual environment, and will not be available outside of this.
@@ -255,21 +189,10 @@ Write the server code.
     ```sh
     code .
     ```
-
-1. When VS Code launches, it will activate the Python virtual environment. This will be reported in the bottom status bar:
-
-    ![VS Code showing the selected virtual environment](../../../images/vscode-virtual-env.png)
-
-1. If the VS Code Terminal is already running when VS Code starts up, it won't have the virtual environment activated in it. The easiest thing to do is kill the terminal using the **Kill the active terminal instance** button:
+    
+1. Launch a new VS Code Terminal by selecting *Terminal -> New Terminal, or pressing `` CTRL+` ``.
 
     ![VS Code Kill the active terminal instance button](../../../images/vscode-kill-terminal.png)
-
-1. Launch a new VS Code Terminal by selecting *Terminal -> New Terminal, or pressing `` CTRL+` ``. The new terminal will load the virtual environment, with the call to activate this appearing in the terminal. The name of the virtual environment (`.venv`) will also be in the prompt:
-
-    ```output
-    ➜  nightlight-server source .venv/bin/activate
-    (.venv) ➜  nightlight 
-    ```
 
 1. Open the `app.py` file from the VS Code explorer and add the following code:
 
@@ -313,7 +236,7 @@ Write the server code.
 1. From the VS Code terminal, run the following to run your Python app:
 
     ```sh
-    python app.py
+    python3 app.py
     ```
 
     The app will start listening to messages from the IoT device.
@@ -321,7 +244,7 @@ Write the server code.
 1. Make sure your device is running and sending telemetry messages. Adjust the light levels detected by your physical or virtual device. Messages being received will be printed to the terminal.
 
     ```output
-    (.venv) ➜  nightlight-server python app.py
+    ...nightlight-server$ python3 app.py
     Message received: {'light': 0}
     Message received: {'light': 400}
     ```
@@ -390,7 +313,7 @@ The next step for our Internet controlled nightlight is for the server code to s
 1. Adjust the light levels detected by your physical or virtual device. Messages being received and commands being sent will be written to the terminal:
 
     ```output
-    (.venv) ➜  nightlight-server python app.py
+    ...nightlight-server$ python3 app.py
     Message received: {'light': 0}
     Sending message: {'led_on': True}
     Message received: {'light': 400}
