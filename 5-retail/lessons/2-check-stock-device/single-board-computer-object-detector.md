@@ -8,7 +8,7 @@ The majority of your stock detector is the same as the image classifier you crea
 
 ### Task - copy the image classifier project
 
-1. Create a folder called `stock-counter` either on your computer if you are using a virtual IoT device, or on your Raspberry Pi. If you are using a virtual IoT device make sure you set up a virtual environment.
+1. Create a folder called `stock-counter` either on your computer if you are using a virtual IoT device, or on your Raspberry Pi.
 
 1. Set up the camera hardware.
 
@@ -56,7 +56,7 @@ The code you used to classify images is very similar to the code to detect objec
 1. Run this code and it will capture an image, sending it to the object detector, and print out the detected objects. If you are using a virtual IoT device ensure you have an appropriate image set in CounterFit, or our web cam is selected. If you are using a Raspberry Pi, make sure your camera is pointing to objects on a shelf.
 
     ```output
-    pi@raspberrypi:~/stock-counter $ python3 app.py 
+    ...stock-counter$ python3 app.py 
     tomato paste:   34.13%
     tomato paste:   33.95%
     tomato paste:   35.05%
@@ -69,6 +69,6 @@ The code you used to classify images is very similar to the code to detect objec
 
     ![4 cans of tomato paste on a shelf with predictions for the 4 detections of 35.8%, 33.5%, 25.7% and 16.6%](../../../images/custom-vision-stock-prediction.png)
 
-> 💁 You can find this code in the [code-detect/pi](code-detect/pi) or [code-detect/virtual-iot-device](code-detect/virtual-iot-device) folder.
+> 💁 You can find this code in the [code-detect/virtual-iot-device](code-detect/virtual-iot-device) folder.
 
 😀 Your stock counter program was a success!
