@@ -18,14 +18,14 @@ To use a virtual GPS sensor, you need to add one to the CounterFit app
 
 Add the GPS sensor to the CounterFit app.
 
-1. Create a new Python app on your computer in a folder called `gps-sensor` with a single file called `app.py` and a Python virtual environment, and add the CounterFit pip packages.
+1. Create a new Python app on your computer in a folder called `gps-sensor` with a single file called `app.py`, and add the CounterFit pip packages.
 
     > ⚠️ You can refer to [the instructions for creating and setting up a CounterFit Python project in lesson 1 if needed](../../../1-getting-started/lessons/1-introduction-to-iot/virtual-device.md).
 
-1. Install an additional Pip package to install a CounterFit shim that can talk to UART based sensors over a serial connection. Make sure you are installing this from a terminal with the virtual environment activated.
+1. Install an additional Pip package to install a CounterFit shim that can talk to UART based sensors over a serial connection.
 
     ```sh
-    pip install counterfit-shims-serial
+    pip3 install counterfit-shims-serial
     ```
 
 1. Make sure the CounterFit web app is running
