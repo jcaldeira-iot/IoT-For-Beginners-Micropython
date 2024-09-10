@@ -46,6 +46,6 @@ Subscribe to commands.
 
 1. Adjust the light levels detected by your physical or virtual device. Messages being received and commands being sent will be written to the terminal. The LED will also be turned on and off depending on the light level.
 
-> 💁 You can find this code in the [code-commands/virtual-device](code-commands/virtual-device) folder or the [code-commands/pi](code-commands/pi) folder.
+> 💁 You can find this code in the [code-commands/virtual-device](code-commands/virtual-device) folder.
 
 😀 You have successfully coded your device to respond to commands from an MQTT broker.
