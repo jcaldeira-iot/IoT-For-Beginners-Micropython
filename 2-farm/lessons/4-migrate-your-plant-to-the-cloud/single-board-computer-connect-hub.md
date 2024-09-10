@@ -111,6 +111,6 @@ Your device needs to handle a command from the server code to control the relay.
 
     This code tells the IoT Hub client to call the `handle_method_request` function when a direct method is called.
 
-> 💁 You can find this code in the [code/pi](code/pi) or [code/virtual-device](code/virtual-device) folder.
+> 💁 You can find this code in the [code/virtual-device](code/virtual-device) folder.
 
 😀 Your soil moisture sensor program is connected to your IoT Hub!
