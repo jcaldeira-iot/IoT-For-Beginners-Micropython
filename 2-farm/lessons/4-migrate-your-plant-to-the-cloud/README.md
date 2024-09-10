@@ -136,19 +136,9 @@ The video below gives a short overview of Azure IoT Hub:
 
 ✅ Take a moment to do some research and read the overview of IoT hub in the [Microsoft IoT Hub documentation](https://docs.microsoft.com/azure/iot-hub/about-iot-hub?WT.mc_id=academic-17441-jabenn).
 
-The cloud services available in Azure can be configured through a web-based portal, or via a command-line interface (CLI). For this task, you will use the CLI.
+The cloud services available in Azure can be configured through a web-based portal, or via a command-line interface (CLI). For this task, you will use the Azure CLI.
 
-### Task - install the Azure CLI
-
-To use the Azure CLI, first it must be installed on your PC or Mac.
-
-1. Follow the instructions in the [Azure CLI documentation](https://docs.microsoft.com/cli/azure/install-azure-cli?WT.mc_id=academic-17441-jabenn) to install the CLI.
-
-1. The Azure CLI supports a number of extensions that add capabilities to manage a wide range of Azure services. Install the IoT extension by running the following command from your command line or terminal:
-
-    ```sh
-    az extension add --name azure-iot
-    ```
+### Task - login to Azure from Azure CLI
 
 1. From your command line or terminal, run the following command to log in to your Azure subscription from the Azure CLI.
 
@@ -305,8 +295,7 @@ The IoT device can be registered with your IoT Hub using the Azure CLI.
 
 Work through the relevant guide to connect your IoT device to the cloud:
 
-* [Arduino - Wio Terminal](wio-terminal-connect-hub.md)
-* [Single-board computer - Raspberry Pi/Virtual IoT device](single-board-computer-connect-hub.md)
+* **[Single-board computer - Raspberry Pi/Virtual IoT device](single-board-computer-connect-hub.md) <<<<----------**
 
 ### Task - monitor events
 
