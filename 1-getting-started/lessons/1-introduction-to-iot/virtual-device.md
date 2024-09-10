@@ -30,7 +30,7 @@ Install the Pip packages for CounterFit.
     pip3 install counterfit-shims-grove
     ```
 
-1. From your terminal or command line, run the following at a location of your choice to create and navigate to a new directory:
+1. Run the following commands at a location of your choice to create and navigate to a new directory:
 
     ```sh
     mkdir nightlight
