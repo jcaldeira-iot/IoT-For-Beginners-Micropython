@@ -129,7 +129,7 @@ doc["gps"]["lat"] = gps.location.lat();
 doc["gps"]["lon"] = gps.location.lng();
 ```
 
-If you are using a Virtual IoT device, remember to install all the needed libraries using a virtual environment.
+If you are using a Virtual IoT device, remember to install all the needed libraries.
 
 For both the Raspberry Pi and Virtual IoT device, use the existing code from the last lesson to get the latitude and longitude values, then send them in the correct JSON format with the following code:
 
@@ -175,7 +175,7 @@ Once data is flowing into your IoT Hub, you can write some serverless code to li
 
 ### Task - handle GPS events using serverless code
 
-1. Create an Azure Functions app using the Azure Functions CLI. Use the Python runtime, and create it in a folder called `gps-trigger`, and use the same name for the Functions App project name. Make sure you create a virtual environment to use for this.
+1. Create an Azure Functions app using the Azure Functions CLI. Use the Python runtime, and create it in a folder called `gps-trigger`, and use the same name for the Functions App project name.
 
     > ⚠️ You can refer to the [instructions for creating an Azure Functions Project from project 2, lesson 5](../../../2-farm/lessons/5-migrate-application-to-the-cloud/README.md#create-a-serverless-application) if needed.
 
@@ -187,7 +187,7 @@ Once data is flowing into your IoT Hub, you can write some serverless code to li
 
 1. Use the Azurite app as a local storage emulator
 
-1. Run your functions app to ensure it is receiving events from your GPS device. Make sure your IoT device is also running and sending GPS data.
+1. Run your functions app to ensure it is receiving events from your GPS device. **Make sure your IoT device is also running and sending GPS data.**
 
     ```output
     Python EventHub trigger processed an event: {"gps": {"lat": 47.73481, "lon": -122.25701}}
@@ -277,13 +277,7 @@ The data will be saved as a JSON blob with the following format:
     azure-storage-blob
     ```
 
-    Install the packages from this file in your virtual environment.
-
-    > If you get an error, then upgrade your Pip version in your virtual environment to the latest version with the following command, then try again:
-    >
-    > ```sh
-    > pip install --upgrade pip
-    > ```
+    Install the packages from this file.
 
 1. In the `__init__.py` file for the `iot-hub-trigger`, add the following import statements:
 
