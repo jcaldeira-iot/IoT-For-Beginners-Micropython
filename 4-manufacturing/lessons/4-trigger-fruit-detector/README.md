@@ -117,9 +117,7 @@ Proximity sensors can be used to measure the distance from the sensor to an obje
 
 Work through the relevant guide to use a proximity sensor to detect an object using your IoT device:
 
-* [Arduino - Wio Terminal](wio-terminal-proximity.md)
-* [Single-board computer - Raspberry Pi](pi-proximity.md)
-* [Single-board computer - Virtual device](virtual-device-proximity.md)
+* **[Single-board computer - Virtual device](virtual-device-proximity.md) <<<<----------**
 
 ## Data used for a fruit quality detector
 
