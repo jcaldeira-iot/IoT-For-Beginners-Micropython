@@ -14,8 +14,6 @@ Install the pip package
 
 1. Open the nightlight project in VS Code.
 
-1. If you are using a virtual IoT device, ensure the terminal is running the virtual environment. If you are using a Raspberry Pi you won't be using a virtual environment.
-
 1. Run the following command to install the MQTT pip package:
 
     ```sh
@@ -68,7 +66,7 @@ Write the device code.
 1. Run the code in the same way as you ran the code from the previous part of the assignment. If you are using a virtual IoT device, then make sure the CounterFit app is running and the light sensor and LED have been created on the correct pins.
 
     ```output
-    (.venv) ➜  nightlight python app.py 
+    ...nightlight$ python3 app.py 
     MQTT connected!
     Light level: 0
     Light level: 0
