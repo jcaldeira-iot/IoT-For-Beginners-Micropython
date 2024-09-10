@@ -68,9 +68,6 @@ Create a Python application to print `"Hello World"` to the console.
 1. Launch a new VS Code Terminal by selecting *Terminal -> New Terminal, or pressing `` CTRL+` ``:
 
     ![VS Code Kill the active terminal instance button](../../../images/vscode-kill-terminal.png)
-    ```output
-    ...nightlight$
-    ```
 
 1. Open the `app.py` file from the VS Code explorer and add the following code:
 
