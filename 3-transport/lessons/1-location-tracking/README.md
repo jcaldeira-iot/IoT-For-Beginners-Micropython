@@ -138,9 +138,7 @@ You can use a GPS sensor on your IoT device to get GPS data.
 
 Work through the relevant guide to read GPS data using your IoT device:
 
-* [Arduino - Wio Terminal](wio-terminal-gps-sensor.md)
-* [Single-board computer - Raspberry Pi](pi-gps-sensor.md)
-* [Single-board computer - Virtual device](virtual-device-gps-sensor.md)
+* **[Single-board computer - Virtual device](virtual-device-gps-sensor.md) <<<<----------**
 
 ## NMEA GPS data
 
@@ -180,8 +178,7 @@ Rather than use the raw NMEA data, it is better to decode it into a more useful 
 
 Work through the relevant guide to decode GPS sensor data using your IoT device:
 
-* [Arduino - Wio Terminal](wio-terminal-gps-decode.md)
-* [Single-board computer - Raspberry Pi/Virtual IoT device](single-board-computer-gps-decode.md)
+* **[Single-board computer - Raspberry Pi/Virtual IoT device](single-board-computer-gps-decode.md) <<<<----------**
 
 ---
 
