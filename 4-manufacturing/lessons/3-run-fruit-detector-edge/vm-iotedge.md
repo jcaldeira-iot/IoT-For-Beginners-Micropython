@@ -19,9 +19,9 @@ In Azure, you can create a virtual machine - a computer in the cloud that you ca
                 --parameters adminPasswordOrKey="<password>"
     ```
 
-    Replace `<vm_name>` with a name for this virtual machine. This needs to be globally unique, so use something like `fruit-quality-detector-vm-` with your name or another value on the end.
+    Replace `<vm_name>` (no uppercase letters may be used) with a name for this virtual machine. This needs to be globally unique, so use something like `fruit-quality-detector-vm-` with your name or another value on the end.
 
-    Replace `<username>` and `<password>` with a username and password to use to log in to the VM. These need to be relatively secure, so you can't use admin/password.
+    Replace `<username>` and `<password>` with a username and password to use to log in to the VM. These need to be relatively secure, so the password must contain a number, a lowercase letter, a uppercase letter and a symbol.
 
     Replace `<connection_string>` with the connection string of your `fruit-quality-detector-edge` IoT Edge device.
 
