@@ -43,10 +43,10 @@ Program the device to publish the temperature data.
 
     > 💁 The `sleep` function takes the time in seconds, so to make it easier to read the value is passed as the result of a calculation. 60s in a minute, so 10 x (60s in a minute) gives a 10 minute delay.
 
-1. Run the code in the same way as you ran the code from the previous part of the assignment. If you are using a virtual IoT device, then make sure the CounterFit app is running and the humidity and temperature sensors have been created on the correct pins.
+1. Run the code in the same way as you ran the code from the previous part of the assignment. If you are using a virtual IoT device, then **make sure the CounterFit app is running and the humidity and temperature sensors have been created on the correct pins**.
 
     ```output
-    pi@raspberrypi:~/temperature-sensor $ python3 app.py
+    ...temperature-sensor$ python3 app.py
     MQTT connected!
     Sending telemetry  {"temperature": 25}
     Sending telemetry  {"temperature": 25}
