@@ -131,9 +131,9 @@ In the last lesson you captured GPS data from a GPS sensor connected to your IoT
     message = Message(json.dumps(message_json))
     ```
 
-    > 💁 You can find this code in the [code/virtual-device](code/virtual-device) folder.
+> 💁 You can find this code in the [code/virtual-device](code/virtual-device) folder.
 
-    Run your device code and ensure messages are flowing into IoT Hub using the `az iot hub monitor-events` CLI command.
+Run your device code and ensure messages are flowing into IoT Hub using the `az iot hub monitor-events` CLI command.
 
 ## Hot, warm, and cold paths
 
