@@ -56,6 +56,6 @@ Program the device to decode the GPS data.
     47.6423109,-122.1390293 - from 3 satellites
     ```
 
-> 💁 You can find this code in the [code-gps-decode/virtual-device](code-gps-decode/virtual-device) folder, or the [code-gps-decode/pi](code-gps-decode/pi) folder.
+> 💁 You can find this code in the [code-gps-decode/virtual-device](code-gps-decode/virtual-device) folder.
 
 😀 Your GPS sensor program with data decoding was a success!
