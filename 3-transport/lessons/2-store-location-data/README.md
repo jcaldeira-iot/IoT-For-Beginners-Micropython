@@ -121,17 +121,9 @@ In the last lesson you captured GPS data from a GPS sensor connected to your IoT
 
 1. Send GPS data every minute so you don't use up your daily message allocation.
 
-If you are using the Wio Terminal, remember to add all the necessary libraries, and set the time using an NTP server. Your code will also need to ensure that it has read all the data from the serial port before sending the GPS location, using the existing code from the last lesson. Use the following code to construct the JSON document:
-
-```cpp
-DynamicJsonDocument doc(1024);
-doc["gps"]["lat"] = gps.location.lat();
-doc["gps"]["lon"] = gps.location.lng();
-```
-
 If you are using a Virtual IoT device, remember to install all the needed libraries.
 
-For both the Raspberry Pi and Virtual IoT device, use the existing code from the last lesson to get the latitude and longitude values, then send them in the correct JSON format with the following code:
+For Virtual IoT device, use the existing code from the last lesson to get the latitude and longitude values, then send them in the correct JSON format with the following code:
 
 ```python
 message_json = { "gps" : { "lat":lat, "lon":lon } }
@@ -139,7 +131,7 @@ print("Sending telemetry", message_json)
 message = Message(json.dumps(message_json))
 ```
 
-> 💁 You can find this code in the [code/wio-terminal](code/wio-terminal), [code/pi](code/pi) or [code/virtual-device](code/virtual-device) folder.
+> 💁 You can find this code in the [code/virtual-device](code/virtual-device) folder.
 
 Run your device code and ensure messages are flowing into IoT Hub using the `az iot hub monitor-events` CLI command.
 
