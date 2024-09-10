@@ -94,7 +94,7 @@ Program the nightlight.
     Light values will be output to the console.
 
     ```output
-    (.venv) ➜  GroveTest python3 app.py 
+    ...nightlight$ python3 app.py 
     Light level: 143
     Light level: 244
     Light level: 246
