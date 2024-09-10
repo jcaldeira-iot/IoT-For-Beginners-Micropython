@@ -12,7 +12,7 @@ In these 4 lessons you'll learn how to build a smart timer, using AI to recogniz
 
 ## Topics
 
-1. [Recognize speech with an IoT device](./lessons/1-speech-recognition/README.md)
+21. [Recognize speech with an IoT device](./lessons/1-speech-recognition/README.md)
 1. [Understand language](./lessons/2-language-understanding/README.md)
 1. [Set a timer and provide spoken feedback](./lessons/3-spoken-feedback/README.md)
 1. [Support multiple languages](./lessons/4-multiple-language-support/README.md)
