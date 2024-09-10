@@ -18,7 +18,7 @@ To use a virtual soil moisture sensor, you need to add it to the CounterFit app
 
 Add the soil moisture sensor to the CounterFit app.
 
-1. Create a new Python app on your computer in a folder called `soil-moisture-sensor` with a single file called `app.py` and a Python virtual environment, and add the CounterFit pip packages.
+1. Create a new Python app on your computer in a folder called `soil-moisture-sensor` with a single file called `app.py`, and add the CounterFit pip packages.
 
     > ⚠️ You can refer to [the instructions for creating and setting up a CounterFit Python project in lesson 1 if needed](../../../1-getting-started/lessons/1-introduction-to-iot/virtual-device.md).
 
@@ -95,7 +95,7 @@ Program the soil moisture sensor app.
 1. Run the Python app. You will see the soil moisture measurements written to the console. Change the *Value* or the *Random* settings to see the value change.
 
     ```output
-    (.venv) ➜ soil-moisture-sensor $ python app.py 
+    ...soil-moisture-sensor$ python3 app.py 
     Soil moisture: 615
     Soil moisture: 612
     Soil moisture: 498
