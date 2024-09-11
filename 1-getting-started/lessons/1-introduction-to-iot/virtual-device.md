@@ -26,6 +26,7 @@ Install the Pip packages for CounterFit.
 
     ```sh
     pip3 install CounterFit
+    pip3 install werkzeug==2.2.2
     pip3 install counterfit-connection
     pip3 install counterfit-shims-grove
     ```
