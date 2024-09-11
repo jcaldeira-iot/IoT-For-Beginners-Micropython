@@ -135,6 +135,8 @@ Before you can get started with programming your IoT device, you will need to do
 
 These instructions do include links to third-party websites from the creators of the hardware or tools you will be using. This is to ensure you are always using the most up-to-date instructions for the various tools and hardware.
 
+### Task - set up a Virtual device
+
 Work through the relevant guide to set your device up and complete a 'Hello World' project. This will be the first step in creating an IoT nightlight over the 4 lessons in this getting started part.
 
 * **[Single-board computer - Virtual device](virtual-device.md) <<<<----------**
