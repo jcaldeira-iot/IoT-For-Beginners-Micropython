@@ -48,6 +48,8 @@ All sensors have one thing in common - they convert whatever they sense into an 
 
 ## Use a sensor
 
+### Task - set up a sensor in a Virtual device
+
 Follow the relevant guide below to add a sensor to your IoT device:
 
 * **[Single-board computer - Virtual device](virtual-device-sensor.md) <<<<----------**
@@ -124,6 +126,8 @@ Some common actuators include:
 Follow the relevant guide below to add an actuator to your IoT device, controlled by the sensor, to build an IoT nightlight. It will gather light levels from the light sensor, and use an actuator in the form of an LED to emit light when the detected light level is too low.
 
 ![A flow chart of the assignment showing light levels being read and checked, and the LED begin controlled](../../../images/assignment-1-flow.png)
+
+### Task - set up an actuator in a Virtual device
 
 * **[Single-board computer - Virtual device](virtual-device-actuator.md) <<<<----------**
 
