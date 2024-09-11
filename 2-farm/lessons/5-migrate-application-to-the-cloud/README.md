@@ -248,23 +248,7 @@ You are now ready to create the event trigger.
 This will create a folder inside the `soil-moisture-trigger` folder called `iot-hub-trigger` that contains this function. This folder will have the following files inside it:
 
 * `__init__.py` - this is the Python code file that contains the trigger, using the standard Python file name convention to turn this folder into a Python module.
-
-    This file will contain the following code:
-
-    ```python
-    import logging
-
-    import azure.functions as func
-
-
-    def main(event: func.EventHubEvent):
-        logging.info('Python EventHub trigger processed an event: %s',
-                    event.get_body().decode('utf-8'))
-    ```
-
-    The core of the trigger is the `main` function. It is this function that is called with the events from the IoT Hub. This function has a parameter called `event` that contains an `EventHubEvent`. Every time a message is sent to IoT Hub, this function is called passing that message as the `event`, along with properties that are the same as the annotations you saw in the last lesson.
-
-    The core of this function logs the event.
+    The core of the trigger is the `main` function. It is this function that is called with the events from the IoT Hub. This function has a parameter called `event` that contains an `EventHubEvent`. Every time a message is sent to IoT Hub, this function is called passing that message as the `event`, along with properties that are the same as the annotations you saw in the last lesson. The core of this function logs the event.
 
 * `function.json` - this contains configuration for the trigger. The main configuration is in a section called `bindings`. A binding is the term for a connection between Azure Functions and other Azure services. This function has an input binding to an event hub - it connects to an event hub and receives data.
 
@@ -281,6 +265,19 @@ This will create a folder inside the `soil-moisture-trigger` folder called `iot-
 
     > 💁 The connection string cannot be stored in the `function.json` file, it has to be read from the settings. This is to stop you accidentally exposing your connection string.
 
+1. Replace the contents of `__init__.py` by the following code:
+
+    ```python
+    import logging
+
+    import azure.functions as func
+
+
+    def main(event: func.EventHubEvent):
+        logging.info('Python EventHub trigger processed an event: %s',
+                    event.get_body().decode('utf-8'))
+    ```
+
 1. Due to [a bug in the Azure Functions template](https://github.com/Azure/azure-functions-templates/issues/1250), the `function.json` has an incorrect value for the `cardinality` field. Update this field from `many` to `one`:
 
     ```json
@@ -295,10 +292,21 @@ This will create a folder inside the `soil-moisture-trigger` folder called `iot-
 
     > 💁 Remember - this needs to point to the setting, not contain the actual connection string.
 
-1. The connection string contains the `eventHubName` value, so the value for this in the `function.json` file needs to be cleared. Update this value to an empty string:
+1. The connection string contains the `"eventHubName"` value, so the value for this in the `function.json` file needs to be cleared. Update this value to an empty string:
 
     ```json
     "eventHubName": "",
+    ```
+1. Update the value of `"name"` in the `function.json` file:
+
+    ```json
+    "name": "event",
+    ```
+
+1. Update the `"version"` value of `"extensionBundle"` in the `host.json` file:
+
+    ```json
+    "version": "[2.*, 3.0.0)"
     ```
 
 ### Task - run the event trigger
