@@ -244,13 +244,16 @@ The data will be saved as a JSON blob with the following format:
 
 ### Task - connect your serverless code to storage
 
-1. Create an Azure Storage account. Name it something like `gps<your name>`.
+1. Create an Azure Storage account:
 
-    > ⚠️ You can refer to the [instructions for creating a storage account from project 2, lesson 5](../../../2-farm/lessons/5-migrate-application-to-the-cloud/README.md#task---create-the-cloud-resources)  if needed.
+    ```sh
+    az storage account create --resource-group gps-sensor \
+                              --sku Standard_LRS \
+                              --allow-blob-public-access $true \
+                              --name <storage_name> 
+    ```
 
-    If you still have a storage account from the previous project, you can re-use this.
-
-    > 💁 You will be able to use the same storage account to deploy your Azure Functions app later in this lesson.
+    Replace `<storage_name>` with a name for your storage account. This will need to be globally unique as it forms part of the URL used to access the storage account. You can only use lower case letters and numbers for this name, no other characters, and it's limited to 24 characters. Use something like `gps<your name>`.
 
 1. Run the following command to get the connection string for the storage account:
 
@@ -271,9 +274,12 @@ The data will be saved as a JSON blob with the following format:
 
     Install the packages from this file.
 
-1. In the `__init__.py` file for the `iot-hub-trigger`, add the following import statements:
+1. In the `__init__.py` file for the `iot-hub-trigger`, replace all the content with the following code snippets:
 
     ```python
+    from typing import List
+    import logging
+    import azure.functions as func
     import json
     import os
     import uuid
@@ -284,7 +290,7 @@ The data will be saved as a JSON blob with the following format:
 
     The `azure.storage.blob` package contains the Python SDK to work with blob storage.
 
-1. Before the `main` method, add the following helper function:
+1. After add the following helper function:
 
     ```python
     def get_or_create_container(name):
@@ -302,6 +308,15 @@ The data will be saved as a JSON blob with the following format:
 
     When the new container is created, public access is granted to query the blobs in the container. This will be used in the next lesson to visualize the GPS data on a map.
 
+1. After add the `main` function as following:
+
+    ```python
+    def main(events: List[func.EventHubEvent]):
+        for event in events:
+            logging.info('Python EventHub trigger processed an event: %s',
+                            event.get_body().decode('utf-8'))
+    ```
+       
 1. Unlike with soil moisture, with this code we want to store every event, so add the following code inside the `for event in events:` loop in the `main` function, below the `logging` statement:
 
     ```python
@@ -313,7 +328,7 @@ The data will be saved as a JSON blob with the following format:
 
     For example, for the `gps-sensor` device ID, the blob name might be `gps-sensor/a9487ac2-b9cf-11eb-b5cd-1e00621e3648.json`.
 
-1. Add the following code below this:
+1. Also inside the `for event in events:` loop in the `main` function, add the following code below the previous one:
 
     ```python
     container_client = get_or_create_container('gps-data')
@@ -322,7 +337,7 @@ The data will be saved as a JSON blob with the following format:
 
     This code gets the container client using the `get_or_create_container` helper class, and then gets a blob client object using the blob name. These blob clients can refer to existing blobs, or as in this case, to new blob.
 
-1. Add the following code after this:
+1. Also inside the `for event in events:` loop in the `main` function, add the following code below the previous one:
 
     ```python
     event_body = json.loads(event.get_body().decode('utf-8'))
@@ -337,7 +352,7 @@ The data will be saved as a JSON blob with the following format:
 
     > 💁 It is important to use the enqueued time of the message as opposed to the current time to get the time that the message was sent. It could be sitting on the hub for a while before being picked up if the Functions App is not running.
 
-1. Add the following below this code:
+1. Also inside the `for event in events:` loop in the `main` function, add the following code below the previous one:
 
     ```python
     logging.info(f'Writing blob to {blob_name} - {blob_body}')
@@ -345,6 +360,19 @@ The data will be saved as a JSON blob with the following format:
     ```
 
     This code logs that a blob is about to be written with it's details, then uploads the blob body as the content of the new blob.
+
+1. Update the value of `"name"` and '"cardinality"' in the `function.json` file:
+
+    ```json
+    "name": "events",
+    "cardinality": "many",
+    ```
+
+1. Update the `"version"` value of `"extensionBundle"` in the `host.json` file:
+
+    ```json
+    "version": "[2.*, 3.0.0)"
+    ```
 
 1. Run the Functions app. You will see blobs being written for all the GPS events in the output:
 
