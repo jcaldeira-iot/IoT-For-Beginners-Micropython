@@ -236,6 +236,17 @@ If you make a call to your storage to fetch the data you might be surprised to s
 
 > 🎓 CORS stands for "Cross-Origin Resource Sharing" and usually needs to be set explicitly in Azure for security reasons. It stops sites you don't expect from being able to access your data.
 
+1. First, get the storage account key by running the following command:
+
+        ```sh
+        az storage account keys list --output table \
+                                     --account-name <storage_name>
+        ```
+
+        Replace `<storage_name>` with the name of the storage account.
+
+        Copy the value of `key1`.
+
 1. Run the following command to enable CORS:
 
     ```sh
