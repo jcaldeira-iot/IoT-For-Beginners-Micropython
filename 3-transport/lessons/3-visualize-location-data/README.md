@@ -238,14 +238,14 @@ If you make a call to your storage to fetch the data you might be surprised to s
 
 1. First, get the storage account key by running the following command:
 
-        ```sh
-        az storage account keys list --output table \
-                                     --account-name <storage_name>
-        ```
+   ```sh
+   az storage account keys list --output table \
+                                --account-name <storage_name>
+   ```
 
-        Replace `<storage_name>` with the name of the storage account.
+   Replace `<storage_name>` with the name of the storage account.
 
-        Copy the value of `key1`.
+   Copy the value of `key1`.
 
 1. Run the following command to enable CORS:
 
