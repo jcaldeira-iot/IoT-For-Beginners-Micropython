@@ -132,7 +132,7 @@ Now you can take the next step which is to display your map on a web page. We wi
 
 ### Task - show a map on a web page
 
-1. Create a file called index.html in a folder somewhere on your local computer. Add HTML markup to hold a map:
+1. Create a file called 'index.html' in a folder somewhere on your local computer. Add HTML markup to hold a map:
 
     ```html
     <html>
@@ -170,7 +170,7 @@ Now you can take the next step which is to display your map on a web page. We wi
     <script type='text/javascript'>
         function init() {
             var map = new atlas.Map('myMap', {
-                center: [-122.26473, 47.73444],
+                center: [-7.48182, 39.81556],
                 zoom: 12,
                 authOptions: {
                     authType: "subscriptionKey",
@@ -263,7 +263,7 @@ If you make a call to your storage to fetch the data you might be surprised to s
 
 ### Task - load the GPS data from storage
 
-1. Replace the entire contents of the `init` function with the following code:
+1. Replace the entire contents of the `init` function in 'index.html' file with the following code:
 
     ```javascript
     fetch("https://<storage_name>.blob.core.windows.net/gps-data/?restype=container&comp=list")
@@ -277,7 +277,7 @@ If you make a call to your storage to fetch the data you might be surprised to s
     })
     .then( response => {
         map = new atlas.Map('myMap', {
-            center: [-122.26473, 47.73444],
+            center: [-7.48182, 39.81556],
             zoom: 14,
             authOptions: {
                 authType: "subscriptionKey",
@@ -304,7 +304,7 @@ If you make a call to your storage to fetch the data you might be surprised to s
 
     The ready event creates an Azure Maps data source - a container that contains GeoJSON data that will be populated later. This data source is then used to create a bubble layer - that is a set of circles on the map centered over each point in the GeoJSON.
 
-1. Add the `loadJSON` function to your script block, below the `init` function:
+1. Add the `loadJSON` function to your script block in 'index.html' file, below the `init` function:
 
     ```javascript
     var map, features;
