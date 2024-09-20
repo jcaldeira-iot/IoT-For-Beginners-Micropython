@@ -132,7 +132,7 @@ Now you can take the next step which is to display your map on a web page. We wi
 
 ### Task - show a map on a web page
 
-1. Create a file called 'index.html' in a folder somewhere on your local computer. Add HTML markup to hold a map:
+1. Create a file called `index.html` in a folder somewhere on your local computer. Add HTML markup to hold a map:
 
     ```html
     <html>
@@ -184,7 +184,7 @@ Now you can take the next step which is to display your map on a web page. We wi
 
     Replace `<subscription_key>` with the API key for your Azure Maps account.
 
-    If you open your `index.html` page in a web browser, you should see a map loaded, and focused on the Seattle area.
+    If you open your `index.html` page in a web browser, you should see a map loaded, and focused on the `center` coordinates.
 
     ![A map showing Seattle, a city in Washington State, USA](../../../images/map-image.png)
 
@@ -263,7 +263,7 @@ If you make a call to your storage to fetch the data you might be surprised to s
 
 ### Task - load the GPS data from storage
 
-1. Replace the entire contents of the `init` function in 'index.html' file with the following code:
+1. Replace the entire contents of the `init` function in `index.html` file with the following code:
 
     ```javascript
     fetch("https://<storage_name>.blob.core.windows.net/gps-data/?restype=container&comp=list")
@@ -304,7 +304,7 @@ If you make a call to your storage to fetch the data you might be surprised to s
 
     The ready event creates an Azure Maps data source - a container that contains GeoJSON data that will be populated later. This data source is then used to create a bubble layer - that is a set of circles on the map centered over each point in the GeoJSON.
 
-1. Add the `loadJSON` function to your script block in 'index.html' file, below the `init` function:
+1. Add the `loadJSON` function to your script block in `index.html` file, below the `init` function:
 
     ```javascript
     var map, features;
