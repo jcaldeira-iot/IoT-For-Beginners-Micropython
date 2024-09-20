@@ -112,7 +112,7 @@ Your first step is to create an Azure Maps account.
                            --kind Gen2
     ```
 
-    This will create an Azure Maps resource called `gps-sensor`. The tier being used is `S1`, which is a paid tier that includes a range of features, but with a generous amount of calls for free.
+    This will create an Azure Maps resource called `gps-sensor`. The tier being used is `G2`, which is a paid tier that includes a range of features, but with a generous amount of calls for free.
 
     > 💁 To see the cost of using Azure Maps, check out the [Azure Maps pricing page](https://azure.microsoft.com/pricing/details/azure-maps/?WT.mc_id=academic-17441-jabenn).
 
