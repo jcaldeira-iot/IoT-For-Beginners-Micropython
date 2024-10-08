@@ -157,10 +157,8 @@ One of the powerful features of Python is the ability to install [pip packages](
 1. Run the following commands to install the pip package for [Paho-MQTT](https://pypi.org/project/paho-mqtt/), a popular MQTT library.
 
     ```sh
-    pip3 install paho-mqtt
+    pip3 install paho-mqtt==1.6.1
     ```
-
-    This pip package will only be installed in the virtual environment, and will not be available outside of this.
 
 #### Write the server code
 
@@ -170,19 +168,11 @@ The server code can now be written in Python.
 
 Write the server code.
 
-1. From your terminal or command line, run the following inside the virtual environment to create a Python file called `app.py`:
+1. From your terminal or command line, run the following to create a Python file called `app.py`:
 
-    * From Windows run:
-
-        ```cmd
-        type nul > app.py
-        ```
-
-    * On macOS or Linux, run:
-
-        ```cmd
-        touch app.py
-        ```
+    ```cmd
+    touch app.py
+    ```
 
 1. Open the current folder in VS Code:
 
