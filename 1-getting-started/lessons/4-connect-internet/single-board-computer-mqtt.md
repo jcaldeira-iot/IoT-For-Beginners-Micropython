@@ -17,7 +17,7 @@ Install the pip package
 1. Run the following command to install the MQTT pip package:
 
     ```sh
-    pip3 install paho-mqtt
+    pip3 install paho-mqtt==1.6.1
     ```
 
 ## Code the device
