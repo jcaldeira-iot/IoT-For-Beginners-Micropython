@@ -100,15 +100,15 @@ So far your relay is controlled by the IoT device directly based off a single so
 
     > ⚠️ You can refer to [the instructions for connecting to MQTT in project 1, lesson 4 if needed](../../../1-getting-started/lessons/4-connect-internet/README.md#connect-your-iot-device-to-mqtt).
 
-1. Add the relevant device code to send telemetry with the soil moisture settings. For the telemetry message, name the property `soil_moisture`.
+1. Add the relevant **device code** to send telemetry with the soil moisture settings. For the telemetry message, name the property `soil_moisture`.
 
     > ⚠️ You can refer to [the instructions for sending telemetry to MQTT in project 1, lesson 4 if needed](../../../1-getting-started/lessons/4-connect-internet/README.md#send-telemetry-from-your-iot-device).
 
-1. Create some local server code to subscribe to telemetry and send a command to control the relay in a folder called `soil-moisture-sensor-server`. Name the property in the command message `relay_on`, and set the client ID as `soilmoisturesensor_server` prefixed by your ID. Keep the same structure as the server code you wrote for project 1, lesson 4 as you will be adding to this code later in this lesson.
+1. Create some local **server code** to subscribe to telemetry and send a command to control the relay in a folder called `soil-moisture-sensor-server`. Name the property in the command message `relay_on`, and set the client ID as `soilmoisturesensor_server` prefixed by your ID. Keep the same structure as the server code you wrote for project 1, lesson 4 as you will be adding to this code later in this lesson.
 
     > ⚠️ You can refer to [the instructions for sending telemetry to MQTT](../../../1-getting-started/lessons/4-connect-internet/README.md#write-the-server-code) and [sending commands over MQTT](../../../1-getting-started/lessons/4-connect-internet/README.md#task---send-commands-to-the-mqtt-broker) in project 1, lesson 4 if needed.
 
-1. Add the relevant device code to control the relay from received commands, using the `relay_on` property from the message. Send true for `relay_on` if the `soil_moisture` is greater than 450, otherwise send false, the same as the logic you added for the IoT device earlier.
+1. Add the relevant **device code** to control the relay from received commands, using the `relay_on` property from the message. Send true for `relay_on` if the `soil_moisture` is greater than 450, otherwise send false, the same as the logic you added for the IoT device earlier.
 
     > ⚠️ You can refer to [the instructions for responding to commands from MQTT in project 1, lesson 4 if needed](../../../1-getting-started/lessons/4-connect-internet/README.md#task---handle-commands-on-the-iot-device).
 
