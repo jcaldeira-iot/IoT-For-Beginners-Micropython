@@ -348,7 +348,7 @@ This will create a folder inside the `soil-moisture-trigger` folder called `iot-
 
 1. Make sure your IoT device is running, You will see new soil moisture messages appearing in the Functions app.
 
-1. Stop and restart the Functions app. You will see that it won't process messages previous messages again, it will only process new messages.
+1. Stop and restart the Functions app. You will see that it won't process previous messages again, it will only process new messages.
 
 > 💁 VS Code also supports debugging your Functions. You can set break points by clicking on the border by the start of each line of code, or putting the cursor on a line of code and selecting *Run -> Toggle breakpoint*, or pressing `F9`. You can launch the debugger by selecting *Run -> Start debugging*, pressing `F5`, or selecting the *Run and debug* pane and selecting the **Start debugging** button. By doing this you can see the details of the events being processed.
 
@@ -416,7 +416,7 @@ To connect to the Registry Manager, you need a connection string.
     azure-iot-hub
     ```
 
-1. Make sure the VS Code terminal has the virtual environment activated, and run the following command to install the Pip packages:
+1. Run the following command to install the new Pip packages:
 
     ```sh
     pip3 install -r requirements.txt
