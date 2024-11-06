@@ -290,7 +290,7 @@ This will create a folder inside the `soil-moisture-trigger` folder called `iot-
     "connection": "IOT_HUB_CONNECTION_STRING",
     ```
 
-    > 💁 Remember - this needs to point to the setting, not contain the actual connection string.
+    > 💁 **Remember - this needs to point to the setting, not contain the actual connection string.**
 
 1. The connection string contains the `"eventHubName"` value, so the value for this in the `function.json` file needs to be cleared. Update this value to an empty string:
 
@@ -556,7 +556,7 @@ When you developed your Functions App, you stored some settings in the `local.se
 
     Replace `<connection string>` with the value of `IOT_HUB_CONNECTION_STRING` from your `local.settings.json` file.
 
-1. Repeat the step above, but set the value of `REGISTRY_MANAGER_CONNECTION_STRING` to the corresponding value from your `local.settings.json` file.
+1. **Repeat the step above**, but now for the `REGISTRY_MANAGER_CONNECTION_STRING` setting.
 
 When you run these commands, they will also output a list of all the Application Settings for the function app. You can use this to check that your values are set correctly.
 
