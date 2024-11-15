@@ -201,6 +201,8 @@ Write the server code.
     mqtt_client.connect('test.mosquitto.org')
     
     mqtt_client.loop_start()
+
+    print("MQTT connected!")
     
     def handle_telemetry(client, userdata, message):
         payload = json.loads(message.payload.decode())
