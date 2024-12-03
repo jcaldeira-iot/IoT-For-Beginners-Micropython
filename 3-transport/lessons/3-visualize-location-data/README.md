@@ -181,7 +181,7 @@ Now you can take the next step which is to display your map on a web page. We wi
     </script>
     ```
 
-    Replace `<subscription_key>` with the API key for your Azure Maps account.
+    Replace `<subscription_key>` with the `PrimaryKey` API key for your Azure Maps account.
 
     If you open your `index.html` page in a web browser, you should see a map loaded, and focused on the `center` coordinates.
 
@@ -292,7 +292,7 @@ If you make a call to your storage to fetch the data you might be surprised to s
     })
     ```
 
-    Replace `<storage_name>` with the name of your storage account. Replace `<subscription_key>` with the API key for your Azure Maps account.
+    Replace `<storage_name>` with the name of your storage account. Replace `<subscription_key>` with the `PrimaryKey` API key for your Azure Maps account.
 
     There are several things happening here. First, the code fetches your GPS data from your blob container using a URL endpoint built using your storage account name. This URL retrieves from `gps-data`, indicating the resource type is a container (`restype=container`), and lists information about all the blobs. This list won't return the blobs themselves, but will return a URL for each blob that can be used to load the blob data.
 
