@@ -174,8 +174,7 @@ Now you can take the next step which is to display your map on a web page. We wi
                 zoom: 12,
                 authOptions: {
                     authType: "subscriptionKey",
-                    subscriptionKey: "<subscription_key>",
-
+                    subscriptionKey: "<subscription_key>"
                 }
             });
         }
