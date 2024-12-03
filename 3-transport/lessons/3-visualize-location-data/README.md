@@ -280,8 +280,7 @@ If you make a call to your storage to fetch the data you might be surprised to s
             zoom: 14,
             authOptions: {
                 authType: "subscriptionKey",
-                subscriptionKey: "<subscription_key>",
-    
+                subscriptionKey: "<subscription_key>"
             }
         });
         map.events.add('ready', function () {
