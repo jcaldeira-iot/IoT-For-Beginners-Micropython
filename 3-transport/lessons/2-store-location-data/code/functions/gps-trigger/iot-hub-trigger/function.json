@@ -5,7 +5,7 @@
       "type": "eventHubTrigger",
       "name": "events",
       "direction": "in",
-      "eventHubName": "samples-workitems",
+      "eventHubName": "",
       "connection": "IOT_HUB_CONNECTION_STRING",
       "cardinality": "many",
       "consumerGroup": "$Default",
