@@ -351,7 +351,7 @@ Your container can now be deployed to your IoT Edge device. To deploy you need t
 
 ### Task - create the deployment manifest
 
-1. Create a new file called `deployment.json` somewhere on your computer.
+1. Create a new file called `deployment.json` inside the folder where you unzipped the model that you downloaded from Custom Vision.
 
 1. Add the following to this file:
 
