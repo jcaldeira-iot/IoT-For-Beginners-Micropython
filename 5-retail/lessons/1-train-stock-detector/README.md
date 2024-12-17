@@ -101,7 +101,7 @@ You can train an object detector using Custom Vision, in a similar way to how yo
 
     > 💁 You can only have one free training and prediction resource, so make sure you've cleaned up your project from the earlier lessons.
 
-    > ⚠️ You can refer to [the instructions for creating training and prediction resources from project 4, lesson 1 if needed](../../../4-manufacturing/lessons/1-train-fruit-detector/README.md#task---create-a-cognitive-services-resource).
+    > ⚠️ You can refer to [the instructions for creating training and prediction resources from project 4, lesson 1 if needed](../../../4-manufacturing/lessons/1-train-fruit-detector/README.md#custom-vision).
 
 1. Launch the Custom Vision portal at [CustomVision.ai](https://customvision.ai), and sign in with the Microsoft account you used for your Azure account.
 
