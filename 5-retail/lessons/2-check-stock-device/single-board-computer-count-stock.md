@@ -80,19 +80,12 @@ In the image shown above, the bounding boxes have a small overlap. If this overl
 
 ### Task - count stock ignoring overlap
 
-1. The Pip package [Shapely](https://pypi.org/project/Shapely/) can be used to calculate the intersection. If you are using a Raspberry Pi, you will need to install a library dependency first:
-
-    ```sh
-    sudo apt install libgeos-dev
-    ```
-
-1. Install the Shapely Pip package:
+1. The Pip package [Shapely](https://pypi.org/project/Shapely/) can be used to calculate the intersection. Install the Shapely Pip package:
 
     ```sh
     pip3 install shapely
     ```
-
-    If you are using a virtual IoT device, make sure to run this from inside the activated virtual environment.
+    >If you are using a Raspberry Pi, you will need to install a library dependency first: sudo apt install libgeos-dev
 
 1. Add the following import statement to the top of the `app.py` file:
 
