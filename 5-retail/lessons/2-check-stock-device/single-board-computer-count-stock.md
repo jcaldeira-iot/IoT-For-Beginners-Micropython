@@ -85,7 +85,7 @@ In the image shown above, the bounding boxes have a small overlap. If this overl
     ```sh
     pip3 install shapely
     ```
-    >If you are using a Raspberry Pi, you will need to install a library dependency first: sudo apt install libgeos-dev
+    >If you are using a Raspberry Pi, you will need to install a library dependency first: `sudo apt install libgeos-dev`
 
 1. Add the following import statement to the top of the `app.py` file:
 
