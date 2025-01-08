@@ -34,8 +34,6 @@ As a helpful debugging step you can not only print out the bounding boxes, but y
     pip3 install pillow
     ```
 
-    If you are using a virtual IoT device, make sure to run this from inside the activated virtual environment.
-
 1. Add the following import statement to the top of the `app.py` file:
 
     ```python
