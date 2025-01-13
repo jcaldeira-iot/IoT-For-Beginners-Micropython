@@ -6,8 +6,6 @@ import counterfit_shims_serial
 import pynmea2
 import json
 
-connection_string = '<connection_string>'
-
 serial = counterfit_shims_serial.Serial('/dev/ttyAMA0')
 
 def send_gps_data(line):
