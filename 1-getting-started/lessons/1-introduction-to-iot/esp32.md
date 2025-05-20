@@ -2,7 +2,7 @@
 
 The [ESP32-S3](https://www.waveshare.com/wiki/ESP32-S3-DEV-KIT-N8R8) is a compact-size microcontroller development board. A wide range of sensors and actuators can be connected to the board through its available GPIO pins. Throughout these lessons, you will code the ESP32 to access the sensors and actuators using [Micropython](https://micropython.org).
 
-![ESP32-S3-DEV-KIT-N8R8](../../../images/ESP32-S3-DEV-KIT-N8R8.png)
+![ESP32-S3-DEV-KIT-N8R8](../../../images/esp32-s3-dev-kit-n8r8.png)
 
 ## Setup
 
@@ -14,12 +14,12 @@ To program the ESP32-S3, you will use the [Thonny IDE](https://thonny.org). Belo
 
 1. In `Run` menu chosse `Configure interpreter`. Select `MicroPython (ESP32)` as the interpreter and `Espressif Device @ ...` as port.
 
-![Thonny-configureinterpreter](../../../images/Thonny-configureinterpreter.png)
-![Thonny-options](../../../images/Thonny-options.png)
+![Thonny-configureinterpreter](../../../images/thonny-configureinterpreter.png)
+![Thonny-options](../../../images/thonny-options.png)
 
 4. Use the `Stop` button and verify that MicroPython is correctly running on the board.
 
-![Thonny-MicropythonOperating](../../../images/Thonny-MicropythonOperating.png)
+![Thonny-MicropythonOperating](../../../images/thonny-micropythonoperating.png)
 
 ## Hello world
 
