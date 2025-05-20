@@ -10,13 +10,13 @@ The sensor for this lesson is a **light sensor** that uses a [photoresistor](htt
 
 The light sensor that is used to detect the light levels needs to be connected to the ESP32 board pins. The pinout diagram helps you choose the appropriate pins for connecting sensors by showing the function of each pin on the board.
 
-![ESP32 pinout](../../../images/esp-pinout.png)
+![ESP32 pinout](../../../images/esp32-pinout.png)
 
 #### Task - connect the light sensor
 
 Using a breadboard, connect the light sensor to the `ADC1_4` pin on the ESP32 board, following the diagram below.
 
-![A light sensor](../../../images/esp-photoresistor.png)
+![A light sensor](../../../images/esp32-photoresistor.png)
 
 
 
