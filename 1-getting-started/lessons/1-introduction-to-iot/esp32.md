@@ -12,10 +12,14 @@ To program the ESP32-S3, you will use the [Thonny IDE](https://thonny.org). Belo
 
 1. Open the Thonny IDE on your computer.
 
-1. In `Run` menu chosse `Configure interpreter` and select `MicroPython (ESP32)` as the interpreter and `Espressif Device @ ...` as port.
+1. In `Run` menu chosse `Configure interpreter`. Select `MicroPython (ESP32)` as the interpreter and `Espressif Device @ ...` as port.
 
 ![Thonny-configureinterpreter](../../../images/Thonny-configureinterpreter.png)
 ![Thonny-options](../../../images/Thonny-options.png)
+
+1. Use the Stop button and verify that MicroPython is correctly running on the board.
+
+![Thonny-MicropythonOperating](../../../images/Thonny-MicropythonOperating.png)
 
 ## Hello world
 
