@@ -1,6 +1,6 @@
 # ESP32
 
-Instead of purchasing an IoT device, along with sensors and actuators, you can use your computer to simulate IoT hardware. The [CounterFit project](https://github.com/CounterFit-IoT/CounterFit) allows you to run an app locally that simulates IoT hardware such as sensors and actuators, and access the sensors and actuators from local Python code that is written in the same way as the code you would write on a Raspberry Pi using physical hardware.
+The [ESP32-S3](https://www.waveshare.com/wiki/ESP32-S3-DEV-KIT-N8R8) is a compact-size microcontroller development board. A wide range of sensors and actuators can be connected to the board through its available GPIO pins. Throughout these lessons, you will code the ESP32 to access the sensors and actuators using [Micropython](https://micropython.org).
 
 ## Setup
 
