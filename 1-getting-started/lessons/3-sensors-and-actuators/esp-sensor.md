@@ -14,7 +14,7 @@ The light sensor that is used to detect the light levels needs to be connected t
 
 #### Task - connect the light sensor
 
-Using a breadboard, connect the light sensor to the `ADC1_4` pin on the ESP32 board, following the diagram below.
+Using a breadboard, connect the light sensor to the appropriate pins on the ESP32 board, following the diagram below.
 
 ![A light sensor](../../../images/esp32-photoresistor.png)
 
