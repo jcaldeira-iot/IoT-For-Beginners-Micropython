@@ -71,9 +71,12 @@ Program the ESP32.
 
 1. Save the file to the `MicroPython device` and run the code:
 
-    Light values will be output to the console. Cover and uncover the light sensor, and the values will change:
+    Light values will be output to the `Shell` Thonny window. Cover and uncover the light sensor, and the values will change:
 
     ```output
+    >>> %Run -c $EDITOR_CONTENT
+
+    MPY: soft reboot
     Light level: 1034
     Light level: 1034
     Light level: 1034
