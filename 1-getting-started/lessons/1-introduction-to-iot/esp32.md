@@ -51,6 +51,6 @@ It is traditional when starting out with a new programming language or technolog
 
 😀 Your 'Hello World' program was a success!
 
-> 💁 You can find this code in the [code/virtual-device](code/virtual-device) folder.
+> 💁 You can find this code in the [code/esp32](code/esp32) folder.
 
 😀 Your connection to the hardware was a success!
