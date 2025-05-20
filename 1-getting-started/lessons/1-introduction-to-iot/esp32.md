@@ -2,6 +2,8 @@
 
 The [ESP32-S3](https://www.waveshare.com/wiki/ESP32-S3-DEV-KIT-N8R8) is a compact-size microcontroller development board. A wide range of sensors and actuators can be connected to the board through its available GPIO pins. Throughout these lessons, you will code the ESP32 to access the sensors and actuators using [Micropython](https://micropython.org).
 
+![ESP32-S3-DEV-KIT-N8R8](../../../images/raspberry-pi-4.jpg)
+
 ## Setup
 
 The instructions to install and configure the CounterFit app will be given at the relevant time in the assignment instructions as it is installed on a per-project basis.
