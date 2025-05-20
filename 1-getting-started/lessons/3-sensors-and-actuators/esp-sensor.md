@@ -4,7 +4,9 @@ In this part of the lesson, you will add a light sensor to your ESP32.
 
 ## Hardware
 
-The sensor for this lesson is a **light sensor** that uses a [photoresistor](https://wikipedia.org/wiki/Photodiode) to convert light to an electrical signal. This is an analog sensor that sends an integer value from 0 to 4095 indicating a relative amount of light that doesn't map to any standard unit of measurement such as [lux](https://wikipedia.org/wiki/Lux).
+The sensor for this lesson is a **light sensor** that uses a [photoresistor](https://wikipedia.org/wiki/Photoresistor) to convert light to an electrical signal. This is an analog sensor that sends an integer value from 0 to 4095 indicating a relative amount of light that doesn't map to any standard unit of measurement such as [lux](https://wikipedia.org/wiki/Lux).
+
+![Photoresistor](../../../images/photoresistor.png)
 
 ### Connect the light sensor
 
