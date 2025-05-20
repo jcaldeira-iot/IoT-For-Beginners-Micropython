@@ -39,9 +39,10 @@ It is traditional when starting out with a new programming language or technolog
 
 1. Run the code by using using the `Run current script` from `Run` menu
 
-    The following will be in the `Shell` IDE window:
+    The following will be presented in the `Shell` Thonny window:
 
-    ```>>> %Run -c $EDITOR_CONTENT
+    ```
+    >>> %Run -c $EDITOR_CONTENT
 
         MPY: soft reboot
         Hello World!
@@ -49,43 +50,6 @@ It is traditional when starting out with a new programming language or technolog
     ```
 
 😀 Your 'Hello World' program was a success!
-
-### Connect the 'hardware'
-
-As a second 'Hello World' step, you will run the CounterFit app and connect your code to it. This is the virtual equivalent of plugging in some IoT hardware to a dev kit.
-
-#### Task - connect the 'hardware'
-
-1. From the VS Code terminal, launch the CounterFit app with the following command:
-
-    ```sh
-    counterfit
-    ```
-
-    The app will start running and open in your web browser:
-
-    ![The Counter Fit app running in a browser](../../../images/counterfit-first-run.png)
-
-    It will be marked as *Disconnected*, with the LED in the top-right corner turned off.
-
-1. Add the following code to the top of `app.py`:
-
-    ```python
-    from counterfit_connection import CounterFitConnection
-    CounterFitConnection.init('127.0.0.1', 5000)
-    ```
-
-    This code imports the `CounterFitConnection` class from the `counterfit_connection` module, which comes from the `counterfit-connection` pip package you installed earlier. It then initializes a connection to the CounterFit app running on `127.0.0.1`, which is an IP address you can always use to access your local computer (often referred to as *localhost*), on port 5000.
-
-    > 💁 If you have other apps running on port 5000, you can change this by updating the port in the code, and running CounterFit using `CounterFit --port <port_number>`, replacing `<port_number>` with the port you want to use.
-
-1. You will need to launch a new VS Code terminal by selecting the **Create a new integrated terminal** button. This is because the CounterFit app is running in the current terminal.
-
-    ![VS Code Create a new integrated terminal button](../../../images/vscode-new-terminal.png)
-
-1. In this new terminal, run the `app.py` file as before. The status of CounterFit will change to **Connected** and the LED will light up.
-
-    ![Counter Fit showing as connected](../../../images/counterfit-connected.png)
 
 > 💁 You can find this code in the [code/virtual-device](code/virtual-device) folder.
 
