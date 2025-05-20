@@ -82,6 +82,6 @@ Program the ESP32.
     Light level: 2090
     ```
 
-> 💁 You can find this code in the [code-sensor/esp](code-sensor/esp) folder.
+> 💁 You can find this code in the [code-sensor/esp32](code-sensor/esp32) folder.
 
 😀 Adding a sensor to your nightlight program was a success!
