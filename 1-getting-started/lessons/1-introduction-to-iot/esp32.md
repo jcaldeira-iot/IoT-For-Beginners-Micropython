@@ -6,7 +6,15 @@ The [ESP32-S3](https://www.waveshare.com/wiki/ESP32-S3-DEV-KIT-N8R8) is a compac
 
 ## Setup
 
-The instructions to install and configure the CounterFit app will be given at the relevant time in the assignment instructions as it is installed on a per-project basis.
+To program the ESP32-S3, you will use the [Thonny IDE](https://thonny.org). Below are the initial steps and configurations needed to create and upload your code to the ESP32-S3 board.
+
+1. Connect the ESP32-S3 board to your computer.
+
+1. Open the Thonny IDE on your computer.
+
+1. In `Run` menu chosse `Configure interpreter`.
+
+![Thonny-configureintrepreter8](../../../images/Thonny-configureintrepreter.png)
 
 ## Hello world
 
