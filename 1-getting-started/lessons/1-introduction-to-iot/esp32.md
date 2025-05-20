@@ -17,7 +17,7 @@ To program the ESP32-S3, you will use the [Thonny IDE](https://thonny.org). Belo
 ![Thonny-configureinterpreter](../../../images/Thonny-configureinterpreter.png)
 ![Thonny-options](../../../images/Thonny-options.png)
 
-1. Use the Stop button and verify that MicroPython is correctly running on the board.
+4. Use the `Stop` button and verify that MicroPython is correctly running on the board.
 
 ![Thonny-MicropythonOperating](../../../images/Thonny-MicropythonOperating.png)
 
@@ -25,67 +25,9 @@ To program the ESP32-S3, you will use the [Thonny IDE](https://thonny.org). Belo
 
 It is traditional when starting out with a new programming language or technology to create a 'Hello World' application - a small application that outputs something like the text `"Hello World"` to show that all the tools are correctly configured.
 
-The Hello World app for the virtual IoT hardware will ensure that you have Python and Visual Studio code installed correctly. It will also connect to CounterFit for the virtual IoT sensors and actuators. It won't use any hardware, it will just connect to prove everything is working.
+### Task - Create a MicroPython ´Hello world´ example
 
-This app will be in a folder called `nightlight`, and it will be re-used with different code in later parts of this assignment to build the nightlight application.
-
-### Create a Python ´Hello world´ example and connect it to CounterFit
-
-One of the powerful features of Python is the ability to install [Pip packages](https://pypi.org) - these are packages of code written by other people and published to the Internet. You can install a Pip package onto your computer with one command, then use that package in your code. You'll be using Pip to install a package to talk to CounterFit.
-
-#### Task - install CounterFit
-
-Install the Pip packages for CounterFit.
-
-1. From your terminal or command line, run the following commands to install the Pip packages for CounterFit. These packages include the main CounterFit app as well as shims for Grove hardware. These shims allow you to write code as if you were programming using physical sensors and actuators from the Grove ecosystem but connected to virtual IoT devices.
-
-    ```sh
-    pip3 install CounterFit
-    pip3 install werkzeug==2.2.2
-    pip3 install counterfit-connection
-    pip3 install counterfit-shims-grove
-    ```
-
-1. Run the following commands at a location of your choice to create and navigate to a new directory:
-
-    ```sh
-    mkdir nightlight
-    cd nightlight
-    ```
-
-### Write the code
-
-#### Task - write the code
-
-Create a Python application to print `"Hello World"` to the console.
-
-1. From your terminal or command line, run the following to create a Python file called `app.py`:
-
-    * From Windows run:
-
-        ```cmd
-        type nul > app.py
-        ```
-
-    * On macOS or Linux, run:
-
-        ```cmd
-        touch app.py
-        ```
-
-1. Open the current folder in VS Code:
-
-    ```sh
-    code .
-    ```
-
-    > 💁 If your terminal returns `command not found` on macOS it means VS Code has not been added to your PATH. You can add VS Code to your PATH by following the instructions in the [Launching from the command line section of the VS Code documentation](https://code.visualstudio.com/docs/setup/mac?WT.mc_id=academic-17441-jabenn#_launching-from-the-command-line) and run the command afterwards. VS Code is installed to your PATH by default on Windows and Linux.
-
-1. Launch a new VS Code Terminal by selecting *Terminal -> New Terminal, or pressing `` CTRL+` ``:
-
-    ![VS Code Kill the active terminal instance button](../../../images/vscode-kill-terminal.png)
-
-1. Open the `app.py` file from the VS Code explorer and add the following code:
+1. Add the following code to a file in Thonny IDE:
 
     ```python
     print('Hello World!')
@@ -93,17 +35,17 @@ Create a Python application to print `"Hello World"` to the console.
 
     The `print` function prints whatever is passed to it to the console.
 
-1. From the VS Code terminal, run the following to run your Python app:
+1. Save the file as `main.py` to the ESP32 board by selecting the `Save` option from the `File` menu and choosing `MicroPython device` as the destination.
 
-    ```sh
-    python3 app.py
-    ```
+1. Run the code by using using the `Run current script` from `Run` menu
 
-    The following will be in the output:
+    The following will be in the `Shell` IDE window:
 
-    ```output
-    ...nightlight$ python3 app.py 
-    Hello World!
+    ```>>> %Run -c $EDITOR_CONTENT
+
+        MPY: soft reboot
+        Hello World!
+    >>> 
     ```
 
 😀 Your 'Hello World' program was a success!
