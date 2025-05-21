@@ -51,7 +51,7 @@ Program the ESP32.
     light_sensor = ADC(5)
     ```
 
-    The line `light_sensor = ADC(5)` creates an instance of the `ADC` class connecting to pin **ADC1_4** - the analog pin that the light sensor is connected to.
+    The line `light_sensor = ADC(5)` creates an instance of the `ADC` class connecting to pin **ADC1_4** - the analog pin that the light sensor is connected to. **The pin numbers used in the code correspond to the GPIO pinout mapping of the ESP32.**
 
 1. Add an infinite loop after the code above to poll the light sensor value and print it to the console:
 
