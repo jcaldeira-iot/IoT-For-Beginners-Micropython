@@ -22,9 +22,9 @@ Otherwise
 
 LEDs are light-emitting diodes, and diodes are electronic devices that can only carry current one way. This means the LED needs to be connected the right way round, otherwise it won't work.
 
-    One of the legs of the LED is the positive pin, the other is the negative pin. The LED is not perfectly round and is slightly flatter on one side. The slightly flatter side is the negative pin. When you connect the LED to the ESP32 board, make sure the leg by the rounded side is connected to the pin that you want to control in your code, and the flatter side is connected to the **GND** pin of the board.
+One of the legs of the LED is the positive pin, the other is the negative pin. The LED is not perfectly round and is slightly flatter on one side. The slightly flatter side is the negative pin. When you connect the LED to the ESP32 board, make sure the leg by the rounded side is connected to the pin that you want to control in your code, and the flatter side is connected to the **GND** pin of the board.
 
-![A LED](../../../images/led.png)
+![A LED](../../../images/ledpolarity.png)
 
 1. Disconnect the ESP32 board from the computer.
 
