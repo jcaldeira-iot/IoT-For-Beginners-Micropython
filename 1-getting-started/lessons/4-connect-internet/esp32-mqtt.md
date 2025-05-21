@@ -48,7 +48,7 @@ Before communicating with the MQTT broker using the MQTT [micropython-lib](https
     Light level: 1034
     ```
 
-## Code the device
+## Code the device to connect to an MQTT broker
 
 The device is ready to code.
 
@@ -56,13 +56,13 @@ The device is ready to code.
 
 Write the device code.
 
-1. Add the following import to the top of the `app.py` file:
+1. Add the following import after the previous code:
 
     ```python
-    import paho.mqtt.client as mqtt
+    from umqtt.simple import MQTTClient
     ```
 
-    The `paho.mqtt.client` library allows your app to communicate over MQTT.
+    The `umqtt.simple` library allows your board to communicate over MQTT.
 
 1. Add the following code after the definitions of the light sensor and LED:
 
@@ -72,7 +72,7 @@ Write the device code.
     client_name = id + 'nightlight_client'
     ```
 
-    Replace `<ID>` with a unique ID that will be used the name of this device client, and later for the topics that this device publishes and subscribes to. The *test.mosquitto.org* broker is public and used by many people, including other students working through this assignment. Having a unique MQTT client name and topic names ensures your code won't clash with anyone elses. You will also need this ID when you are creating the server code later in this assignment.
+    Replace `<ID>` with a unique ID (e.g. your student number) that will be used the name of this device client, and later for the topics that this device publishes and subscribes to. The *test.mosquitto.org* broker is public and used by many people, including other students working through this assignment. Having a unique MQTT client name and topic names ensures your code won't clash with anyone elses. You will also need this ID when you are creating the server code later in this assignment.
 
     > 💁 You can use a website like [GUIDGen](https://www.guidgen.com) to generate a unique ID.
 
@@ -81,25 +81,27 @@ Write the device code.
 1. Add the following code below this new code to create an MQTT client object and connect to the MQTT broker:
 
     ```python
-    mqtt_client = mqtt.Client(client_name)
-    mqtt_client.connect('test.mosquitto.org')
-    
-    mqtt_client.loop_start()
+    mqtt_client = MQTTClient(client_name, 'test.mosquitto.org')
+    mqtt_client.connect()
 
     print("MQTT connected!")
     ```
 
-    This code creates the client object, connects to the public MQTT broker, and starts a processing loop that runs in a background thread listening for messages on any subscribed topics.
+    This code creates the client object and connects to the public MQTT broker.
 
-1. Run the code in the same way as you ran the code from the previous part of the assignment. If you are using a virtual IoT device, then **make sure the CounterFit app is running and the light sensor and LED have been created on the correct pins**.
+1. Run the code in the same way as you ran the code from the previous part of the assignment.
 
     ```output
-    ...nightlight$ python3 app.py 
+    >>> %Run -c $EDITOR_CONTENT
+
+    MPY: soft reboot
+    network config: ('10.6.3.163', '255.255.240.0')
     MQTT connected!
-    Light level: 0
-    Light level: 0
+    Light level: 1034
+    Light level: 1034
+    Light level: 1034
     ```
 
-> 💁 You can find this code in the [code-mqtt/virtual-device](code-mqtt/virtual-device) folder.
+> 💁 You can find this code in the [code-mqtt/esp32](code-mqtt/esp32) folder.
 
 😀 You have successfully connected your device to an MQTT broker.
