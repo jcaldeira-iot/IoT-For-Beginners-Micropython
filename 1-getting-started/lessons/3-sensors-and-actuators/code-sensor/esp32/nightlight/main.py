@@ -1,5 +1,5 @@
 import time
-from machine import ADC, Pin
+from machine import ADC
 
 light_sensor = ADC(5)
 
