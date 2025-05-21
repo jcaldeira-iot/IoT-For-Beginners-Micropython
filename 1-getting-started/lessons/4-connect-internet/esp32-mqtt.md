@@ -8,18 +8,31 @@ In this part of the lesson, you will connect your ESP32 IoT device to an MQTT br
 
 Before communicating with the MQTT broker using the MQTT [micropython-lib](https://github.com/micropython/micropython-lib) package, you need to establish a network connection for your board.
 
+### Task - Connect the ESP32 to the Internet
 
-### Task
+1. Connect the ESP32 to the computer.
 
-Install the pip package
+1. In Thonny, open the file that contains the code from the previous lesson.
 
-1. Open the nightlight project in VS Code.
-
-1. Run the following command to install the MQTT pip package:
+1. Add the following code to the begining of the file.
 
     ```sh
-    pip3 install paho-mqtt==1.6.1
+    import network
+
+    ssid = '<NETWORK_SSID>'
+    password = '<NETWORK_PASSWORD>'
+
+    wlan = network.WLAN(network.STA_IF)
+    wlan.active(True)
+    if not wlan.isconnected():
+        print('connecting to network...')
+        wlan.connect(ssid, password)
+        while not wlan.isconnected():
+            pass
+    print('network config:', wlan.ipconfig('addr4'))
     ```
+
+    This code snippet connects your board to a wireless network. Replace `<NETWORK_SSID>` with the name of your network and `<NETWORK_PASSWORD>` with its password.
 
 ## Code the device
 
