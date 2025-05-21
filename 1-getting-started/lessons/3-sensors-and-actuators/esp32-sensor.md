@@ -18,7 +18,7 @@ The light sensor that is used to detect the light levels needs to be connected t
 
 1. Disconnect the ESP32 board from the computer.
 
-1. Using a breadboard and jumper wires, connect the light sensor to the appropriate pins on the ESP32, following the diagram below.
+1. Using a [breadboard](https://www.elecrow.com/blog/how-to-use-a-breadboard-for-beginners.html) and [jumper wires](https://blog.sparkfuneducation.com/what-is-jumper-wire), connect the light sensor to the appropriate pins on the ESP32, following the diagram below.
 
 ![A light sensor](../../../images/esp32-photoresistor.png)
 
