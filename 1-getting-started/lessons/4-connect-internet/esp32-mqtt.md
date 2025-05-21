@@ -34,6 +34,20 @@ Before communicating with the MQTT broker using the MQTT [micropython-lib](https
 
     This code snippet connects your board to a wireless network. Replace `<NETWORK_SSID>` with the name of your network and `<NETWORK_PASSWORD>` with its password.
 
+1. Save the file to the `MicroPython device` and run the code.
+
+   The following output should be presented on the `Shell` Thonny window.
+
+    ```output
+    >>> %Run -c $EDITOR_CONTENT
+
+    MPY: soft reboot
+    network config: ('10.6.3.163', '255.255.240.0') 
+    Light level: 1034
+    Light level: 1034
+    Light level: 1034
+    ```
+
 ## Code the device
 
 The device is ready to code.
