@@ -52,7 +52,7 @@ Before communicating with the MQTT broker using the MQTT [micropython-lib](https
 
 The device is ready to code.
 
-### Task
+### Task - Connect the ESP32 to an MQTT broker
 
 Write the device code.
 
