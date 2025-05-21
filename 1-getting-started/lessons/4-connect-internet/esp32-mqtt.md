@@ -8,6 +8,13 @@ In this part of the lesson, you will connect your ESP32 IoT device to an MQTT br
 
 To communicate with the MQTT broker, you need to install an MQTT [micropython-lib](https://github.com/micropython/micropython-lib) package on your ESP32 board. For that first you need to connedct your board to the network. After a successful connection it will be used the `mip` package manager to install the needed packages.
 
+
+
+
+
+
+
+
 ### Task
 
 Install the pip package
