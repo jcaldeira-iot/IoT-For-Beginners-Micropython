@@ -68,7 +68,6 @@ Write the device code.
 
     ```python
     id = '<ID>'
-
     client_name = id + 'nightlight_client'
     ```
 
@@ -83,7 +82,6 @@ Write the device code.
     ```python
     mqtt_client = MQTTClient(client_name, 'test.mosquitto.org')
     mqtt_client.connect()
-
     print("MQTT connected!")
     ```
 
