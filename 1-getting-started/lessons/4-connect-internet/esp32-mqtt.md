@@ -2,11 +2,11 @@
 
 The IoT device needs to be coded to communicate with *test.mosquitto.org* using MQTT to send telemetry values with the light sensor reading, and receive commands to control the LED.
 
-In this part of the lesson, you will connect your Raspberry Pi or virtual IoT device to an MQTT broker.
+In this part of the lesson, you will connect your ESP32 IoT device to an MQTT broker.
 
-## Install the MQTT client package
+## Connect the ESP32 board to the Internet and install the MQTT package
 
-To communicate with the MQTT broker, you need to install an MQTT library pip package either on your Pi, or in your virtual environment if you are using a virtual device.
+To communicate with the MQTT broker, you need to install an MQTT [micropython-lib](https://github.com/micropython/micropython-lib) package on your ESP32 board. For that first you need to connedct your board to the network. After a successful connection it will be used the `mip` package manager to install the needed packages.
 
 ### Task
 
