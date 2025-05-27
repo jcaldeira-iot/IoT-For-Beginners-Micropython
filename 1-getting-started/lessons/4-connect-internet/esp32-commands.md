@@ -26,7 +26,7 @@ Subscribe to commands.
 
     ```python
     def handle_command(topic, message):
-        payload = json.loads(message.payload.decode())
+        payload = json.loads(message.decode())
         print("Message received:", payload)
     
         if payload['led_on']:
@@ -41,6 +41,13 @@ Subscribe to commands.
     This code defines a function, `handle_command`, that reads a message as a JSON document and looks for the value of the `led_on` property. If it is set to `True` the LED is turned on, otherwise it is turned off.
 
     The MQTT client subscribes on the topic that the server will send messages on and sets the `handle_command` function to be called when a message is received.
+
+1. Add the following instruction to the while loop, just before the `time.sleep(5)` line:
+
+  ```python
+  mqtt_client.wait_msg()
+  ```
+  This instruction waits for a message from the server.
 
 1. Run the code in the same way as you ran the code from previous lessons.
 
