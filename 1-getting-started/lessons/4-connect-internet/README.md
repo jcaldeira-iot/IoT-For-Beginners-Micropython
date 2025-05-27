@@ -237,8 +237,8 @@ Write the server code.
 
     ```output
     ...nightlight-server$ python3 app.py
-    Message received: {'light': 0}
-    Message received: {'light': 400}
+    Message received: {'light': 1040}
+    Message received: {'light': 3210}
     ```
 
     The app.py file in the nightlight virtual environment has to be running for the app.py file in the nightlight-server virtual environment to receive the messages being sent.
@@ -292,24 +292,24 @@ The next step for our Internet controlled nightlight is for the server code to s
 1. Add the following code to the end of the `handle_telemetry` function:
 
     ```python
-    command = { 'led_on' : payload['light'] < 300 }
+    command = { 'led_on' : payload['light'] > 2047 }
     print("Sending message:", command)
     
     client.publish(server_command_topic, json.dumps(command))
     ```
 
-    This sends a JSON message to the command topic with the value of `led_on` set to true or false depending on if the light is less than 300 or not. If the light is less than 300, true is sent to instruct the device to turn the LED on.
+    This sends a JSON message to the command topic with the value of `led_on` set to true or false depending on if the light is greater than 2047 or not. If the light is greater than 2047, true is sent to instruct the device to turn the LED on.
 
 1. Run the code as before
 
-1. Adjust the light levels detected by your physical or virtual device. Messages being received and commands being sent will be written to the terminal:
+1. Adjust the light levels detected by your sensor. Messages being received and commands being sent will be written to the terminal:
 
     ```output
     ...nightlight-server$ python3 app.py
-    Message received: {'light': 0}
-    Sending message: {'led_on': True}
-    Message received: {'light': 400}
+    Message received: {'light': 1897}
     Sending message: {'led_on': False}
+    Message received: {'light': 4095}
+    Sending message: {'led_on': True}
     ```
 
 > 💁 The telemetry and commands are being sent on a single topic each. This means telemetry from multiple devices will appear on the same telemetry topic, and commands to multiple devices will appear on the same commands topic. If you wanted to send a command to a specific device, you could use multiple topics, named with a unique device id, such as `/commands/device1`, `/commands/device2`. That way a device can listen on messages just meant for that one device.
