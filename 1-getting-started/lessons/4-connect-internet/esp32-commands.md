@@ -44,10 +44,10 @@ Subscribe to commands.
 
 1. Add the following instruction to the while loop, just before the `time.sleep(5)` line:
 
-  ```python
-  mqtt_client.wait_msg()
-  ```
-  This instruction waits for a message from the server.
+    ```python
+    mqtt_client.wait_msg()
+    ```
+    This instruction waits for a message from the server.
 
 1. Run the code in the same way as you ran the code from previous lessons.
 
