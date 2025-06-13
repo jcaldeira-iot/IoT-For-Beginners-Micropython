@@ -62,7 +62,7 @@ Program the ESP32.
         print(f'Temperature {temp}°C')
     ```
 
-    The call to `sensor.measure()` instructs the sensor to perform a measurement of both humidity and temperature. The call to `sensor.temperature()` then retrieves the measured temperature value. Since only the temperature is needed, the humidity value (available via`sensor.humidity()`) is ignored. Finally, the temperature value is printed.
+    The call to `sensor.measure()` instructs the sensor to perform a measurement of both humidity and temperature. The call to `sensor.temperature()` then retrieves the measured temperature value. Since only the temperature is needed, the humidity value (available via `sensor.humidity()`) is ignored. Finally, the temperature value is printed.
 
 1. Add a small sleep of ten seconds at the end of the `loop` as the temperature levels don't need to be checked continuously. A sleep reduces the power consumption of the device.
 
