@@ -8,7 +8,7 @@ The sensor you'll use is a [DHT11 humidity and temperature sensor](https://www.s
 
 This is a digital sensor, so has an onboard ADC to create a digital signal containing the temperature and humidity data that the microcontroller can read.
 
-![A grove temperature sensor](../../../images/grove-dht11.png)
+![A grove temperature sensor](../../../images/dht11.png)
 
 ### Connect the temperature sensor
 
