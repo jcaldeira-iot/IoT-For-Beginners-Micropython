@@ -40,30 +40,29 @@ Program the ESP32.
 
     ```python
     import time
-    from seeed_dht import DHT
+    import dht
     ```
 
-    The `from seeed_dht import DHT` statement imports the `DHT` sensor class to interact with a Grove temperature sensor from the `seeed_dht` module.
+    The `import dht` statement imports the `dht` module to interact with the temperature sensor.
 
 1. Add the following code after the code above to create an instance of the class that manages the temperature sensor:
 
     ```python
-    sensor = DHT("11", 5)
+    sensor = dht.DHT11(6)
     ```
 
-    This declares an instance of the `DHT` class that manages the **D**igital **H**umidity and **T**emperature sensor. The first parameter tells the code the sensor being used is the *DHT11* sensor - the library you are using supports other variants of this sensor. The second parameter tells the code the sensor is connected to digital port `D5` on the Grove base hat.
-
-    > ✅ Remember, all the sockets have unique pin numbers. Pins 0, 2, 4, and 6 are analog pins, pins 5, 16, 18, 22, 24, and 26 are digital pins.
+    This declares an instance of the `DHT11` class that manages the **D**igital **H**umidity and **T**emperature sensor. The parameter tells the code the sensor is connected to digital port `GPIO6` on the ESP32 board.
 
 1. Add an infinite loop after the code above to poll the temperature sensor value and print it to the console:
 
     ```python
     while True:
-        _, temp = sensor.read()
+        sensor.measure()
+        temp = sensor.temperature()
         print(f'Temperature {temp}°C')
     ```
 
-    The call to `sensor.read()` returns a tuple of humidity and temperature. You only need the temperature value, so the humidity is ignored. The temperature value is then printed to the console.
+    The call to `sensor.measure()` instructs the sensor to perform a measurement of both humidity and temperature. The call to `sensor.temperature()` then retrieves the measured temperature value. Since only the temperature is needed, the humidity value (available via`sensor.humidity()`) is ignored. Finally, the temperature value is printed.
 
 1. Add a small sleep of ten seconds at the end of the `loop` as the temperature levels don't need to be checked continuously. A sleep reduces the power consumption of the device.
 
@@ -86,6 +85,6 @@ Program the ESP32.
     Temperature 32°C
     ```
 
-> 💁 You can find this code in the [code-temperature/pi](code-temperature/pi) folder.
+> 💁 You can find this code in the [code-temperature/esp32](code-temperature/esp32) folder.
 
 😀 Your temperature sensor program was a success!
