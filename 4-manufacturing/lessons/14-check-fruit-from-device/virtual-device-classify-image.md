@@ -74,7 +74,7 @@ The Custom Vision service has a Python SDK you can use to classify images.
 
     > 💁 Image classifiers will return the percentages for all tags that have been used. Each tag will have a probability that the image matches that tag.
 
-1. Run your code, with your camera pointing at some fruit, or an appropriate image set, or fruit visible on your webcam if using virtual IoT hardware. You will see the output in the console:
+1. Run your code, with an appropriate image file set on CounterFit. You will see the output in the console:
 
     ```output
     ...fruit-quality-detector$ python3 app.py
