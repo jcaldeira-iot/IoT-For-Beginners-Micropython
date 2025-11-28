@@ -99,7 +99,7 @@ Program the device.
 
     > 💁 If you have other apps running on port 5000, you can change this by updating the port in the code, and running CounterFit using `CounterFit --port <port_number>`, replacing `<port_number>` with the port you want to use.
 
-1. From a terminal or command line, run the following to run your Python app:
+1. From a terminal or command line, run the following command to execute your Python script:
 
     ```sh
     python3 app.py
