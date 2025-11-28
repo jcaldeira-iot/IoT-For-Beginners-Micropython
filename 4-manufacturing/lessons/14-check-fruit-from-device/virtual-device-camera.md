@@ -155,7 +155,7 @@ Program the device.
 
     ![CounterFit with a file set as the image source, and a web cam set showing a person holding a banana in a preview of the webcam](../../../images/counterfit-camera-options.png)
 
-1. An image will be captured and saved as `image.jpg` in the current folder. You will see this file in the VS Code explorer. Select the file to view the image. If it needs rotation, update the `camera.rotation = 0` line as necessary and take another picture.
+1. From a terminal or command line, execute your Python script. An image will be captured and saved as `image.jpg` in the current folder. Select the file to view the image. If it needs rotation, update the `camera.rotation = 0` line as necessary and take another picture.
 
 > 💁 You can find this code in the [code-camera/virtual-iot-device](code-camera/virtual-iot-device) folder.
 
